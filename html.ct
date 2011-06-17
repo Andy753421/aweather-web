@@ -39,6 +39,8 @@ Content-Type: text/html; charset=UTF-8
 			</h2>
 		</div>
 		<div class="content">
+			<p class="msg">This site is currently under construction.</p>
+			<p class="msg" style="font-size:8pt; font-weight:normal;">If I had an animated GIF of a guy with a shovel, I would put it here.</p>
 			<% page->print(); %>
 			<div style="clear:both;"></div>
 		</div>
