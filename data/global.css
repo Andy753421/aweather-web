@@ -66,7 +66,7 @@ body {
 	background-color: white;
 	margin-left: auto;
 	margin-right: auto;
-	font-family: 'DejaVu Sans', Arial, sans-serif;
+	font-family: 'DejaVu Sans Condensed', Arial, sans-serif;
 	width: 850px;
 	/* width: 80%; */
 
@@ -154,6 +154,10 @@ body {
 
 .content hr {
 	margin: 25px 0 25px 0;
+}
+
+.content ul.left {
+	width: 245px;
 }
 
 .content a {

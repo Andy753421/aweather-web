@@ -319,7 +319,7 @@ Content-Type: text/html; charset=UTF-8
 		</a>
 	</div>
 	<b>Features:</b>
-	<ul>
+	<ul class="left">
 		<li>Detailed Level-II radar</li>
 		<li>3D volume rendering</li>
 		<li>Dual-pole support</li>
