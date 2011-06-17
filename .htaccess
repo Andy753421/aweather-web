@@ -1,4 +1,8 @@
 Options +ExecCGI
 AddHandler cgi-script .cgi
 RewriteEngine on
-RewriteRule ^([a-z]*)$ 'index.cgi/$1'
+RewriteRule ^([a-z]*)$        'index.cgi/$1'
+
+# ** Andy stabs apache **
+RewriteCond %{REQUEST_URI}    ^(.*)/[^/]*$
+RewriteRule ^[^/]*\.(gz|exe)$ %1/files/$0  [R=301,L]
