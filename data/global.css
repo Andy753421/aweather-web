@@ -66,7 +66,7 @@ body {
 	background-color: white;
 	margin-left: auto;
 	margin-right: auto;
-	font-family: sans-serif;
+	font-family: 'DejaVu Sans', Arial, sans-serif;
 	width: 850px;
 	/* width: 80%; */
 
@@ -92,7 +92,6 @@ body {
 	font-size: 22pt;
 	font-weight: bold;
 	font-style: italic;
-	font-family: 'DejaVu Sans', sans-serif;
 	color: #222;
 }
 
@@ -112,10 +111,6 @@ body {
 }
 
 .nav .sep {
-	float: left;
-	clear: none;
-	display: block;
-	float: left;
 	width: 0px;
 	height: 36px;
 	border-left:  solid 1px #222;
@@ -159,10 +154,6 @@ body {
 
 .content hr {
 	margin: 25px 0 25px 0;
-}
-
-.content ul.left {
-	width: 250px;
 }
 
 .content a {
