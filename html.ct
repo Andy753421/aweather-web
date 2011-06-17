@@ -30,7 +30,6 @@ Content-Type: text/html; charset=UTF-8
 	</head> 
 	<body> 
 		<div class="top">
-			<!-- <a href=""><img class="logo" src="../data/aweather.svg" /></a> -->
 			<a href="."><img class="logo" src="images/logo.png" alt="AWeather" /></a>
 			<h1 class="title"><a href=".">AWeather</a></h1>
 			<h2 class="nav">
@@ -172,7 +171,7 @@ Content-Type: text/html; charset=UTF-8
 	<ul>
 		<li class="linux"><dl class="inline">
 			<dt>Source code</dt>
-			<dd><a href="../aweather-0.4.2.tar.gz">aweather-0.4.2.tar.gz</a></dd>
+			<dd><a href="files/aweather-0.4.2.tar.gz">aweather-0.4.2.tar.gz</a></dd>
 
 			<dt>Gentoo</dt>
 			<dd>Emerge <span class="code">sci-geosciences/aweather</span> from the sunrise overlay</dd>
@@ -182,10 +181,10 @@ Content-Type: text/html; charset=UTF-8
 		</dl></li>
 		<li class="windows"><dl class="inline">
 			<dt>Windows</dt>
-			<dd><a href="../aweather-0.4.2-gtk.exe">aweather-0.4.2-gtk.exe</a></dd>
+			<dd><a href="files/aweather-0.4.2-gtk.exe">aweather-0.4.2-gtk.exe</a></dd>
 
 			<dt>Update only</dt>
-			<dd><a href="../aweather-0.4.2.exe">aweather-0.4.2.exe</a></dd>
+			<dd><a href="files/aweather-0.4.2.exe">aweather-0.4.2.exe</a></dd>
 		</dl></li>
 		<li class="macos" style="padding-top: .8em; padding-bottom: .8em">
 			Coming soon (hopefully)
@@ -195,7 +194,7 @@ Content-Type: text/html; charset=UTF-8
 	<h2>Unstable releases</h2>
 	<p class="note">Pre-releases, betas, and other hazardous software</p>
 	<div style="margin-left: 30px;">
-		<p>Check out the <a href="../">releases</a> directory for any potential updates</p>
+		<p>Check out the <a href="files">files</a> directory for any potential updates</p>
 		<p>Pre-releases are labeled with a -p0 and are mainly build for testing the Windows packages</p>
 	</div>
 
