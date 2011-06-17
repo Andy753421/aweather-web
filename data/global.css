@@ -1,0 +1,314 @@
+/* Clearn defaults */
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	position: relative; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a img {
+	border: none;
+}
+
+ul {
+	display: block;
+}
+
+/* Global styles */
+.content h1, h2 {
+	margin-top: 1em;
+}
+h3, h4, h5, h6 {
+	margin-top: 0.5em;
+}
+blockquote {
+	font-style: italic;
+	font-family: serif;
+}
+blockquote:before {
+	font-weight: bold;
+	content: '“';
+}
+blockquote:after {
+	font-weight: bold;
+	content: '”';
+}
+ul {
+	left: 30px;
+}
+span.code {
+	font-family: monospace;
+}
+div.code {
+	font-family: monospace;
+	background-color: #666;
+	border: solid 1px #222;
+	padding: 2px 6px 2px 6px;
+	margin-bottom: 5px;
+	color: white;
+	font-weight: bold;
+}
+
+/* Layout */
+body {
+	background: fixed;
+	background-image: url('../images/main-bg.png');
+	background-repeat: repeat-x;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: sans-serif;
+	width: 850px;
+	/* width: 80%; */
+
+}
+
+/* Header stuff */
+.top {
+	height: 80px;
+	margin-top: 15px;
+	border-collapse: collapse;
+}
+
+.top * {
+	float: left;
+}
+
+.logo {
+	width: 130px;
+	z-index: 1;
+}
+
+.title {
+	font-size: 22pt;
+	font-weight: bold;
+	font-style: italic;
+	font-family: 'DejaVu Sans', sans-serif;
+	color: #222;
+}
+
+.nav {
+	position: absolute;
+	top: 45px;
+	left: 135px;
+	right: 0px;
+	z-index: 1;
+	height: 36px;
+	margin: 0 0px 0 30px;
+	padding: 0 15px 0 15px;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	background-image: url("../images/nav-bg.png");
+	box-shadow: 0px 2px 2px #a0a0ff;
+}
+
+.nav .sep {
+	float: left;
+	clear: none;
+	display: block;
+	float: left;
+	width: 0px;
+	height: 36px;
+	border-left:  solid 1px #222;
+	border-right: solid 1px #777;
+	margin: 0 10px 0 10px;
+}
+
+.nav a {
+	display: block;
+	margin: 5px 7px 5px 7px;
+	padding: 2px;
+	font-size: 12pt;
+	font-weight: normal;
+	color: #f4f4f4;
+	border: solid 1px transparent;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+.nav a:hover {
+	text-decoration: underline;
+}
+
+.nav a.cur {
+	background-color: #666;
+	border: solid 1px #888;
+	text-decoration: none;
+}
+
+/* Content */
+.content {
+	background-color: white;
+	color: black;
+	margin-top: 20px;
+	padding: 24px;
+	border:     solid 1px #bce;
+	border-top: solid 1px #abd;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+}
+
+.content hr {
+	margin: 25px 0 25px 0;
+}
+
+.content ul.left {
+	width: 250px;
+}
+
+.content a {
+	text-decoration: underline;
+}
+
+/* Footer */
+.footer, .footer * {
+	text-align: center;
+	font-size: 8pt;
+	margin-top: 5px;
+	color: #444;
+}
+.footer a {
+	text-decoration: underline;
+}
+
+/***********************
+ * Page specific stuff *
+ ***********************/
+/* Index page */
+.buttons {
+	float: right;
+	width: 200px;
+	margin-left: 25px;
+}
+
+.buttons > * {
+	margin-bottom: 10px;
+}
+
+.download {
+	display: block;
+	height: 62px;
+	color: white;
+	padding: 8px 10px 8px 10px;
+	background-image: url("../images/dl-bg.png");
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	box-shadow: 0px 2px 2px rgba(0,0,0,0.30);
+}
+
+.download:first-line {
+	font-weight: bold;
+	font-style: italic;
+	line-height: 2em;
+}
+
+.download img {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.screen {
+	float: right;
+	margin-left: 25px;
+}
+
+/* Screnshots */
+.gallery {
+	left: 0px; /* override ul */
+	margin: 20px;
+	font-size: larger;
+}
+.gallery > * {
+	list-style: none;
+	text-align: center;
+	left:   0;
+	float:  left;
+	width:  320px;
+	height: 350px;
+	margin: 15px;
+	padding-left:  15px;
+	padding-right: 15px;
+}
+.gallery a {
+	display: block;
+}
+.gallery img {
+	box-shadow: 0px 2px 6px #888;
+	margin-bottom: 4px;
+	float: none;
+	margin-left:   0px;
+}
+
+/* News */
+.news {
+	margin-top: 20px;
+}
+.news dt {
+	clear: both;
+	font-weight: bold;
+}
+.news dd {
+	margin-left:   10px;
+	margin-bottom: 15px;
+}
+.note { 
+	font-style: italic;
+	text-align: center;
+}
+
+/* Downloads */
+li.linux, li.windows, li.macos {
+	list-style-type: none;
+	background-repeat: no-repeat;
+	padding-left: 50px;
+	margin: 10px 10px 20px 0;
+	clear: both;
+}
+li.linux {
+	background-image: url("../images/os-linux.png");
+}
+li.windows {
+	background-image: url("../images/os-windows.png");
+}
+li.macos {
+	background-image: url("../images/os-macos.png");
+}
+dl.inline dt {
+	display: block;
+	float: left;
+	clear: both;
+	font-weight: bold;
+	width: 8em;
+}
+dl.inline dt:after {
+	content: ":";
+}
+h1 + .note,
+h2 + .note {
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+dl.inline dt {
+	display: block;
+	float: left;
+	clear: both;
+	font-weight: bold;
+	width: 8em;
+}
+dl.inline dt:after {
+	content: ":";
+}
+dl.small dt {
+	width: 4em;
+}

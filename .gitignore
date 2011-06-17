@@ -1,0 +1,5 @@
+*~
+*.o
+*.cgi
+*.swp
+html.c

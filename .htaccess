@@ -1,0 +1,4 @@
+Options +ExecCGI
+AddHandler cgi-script .cgi
+RewriteEngine on
+RewriteRule ^([a-z]*)$ 'index.cgi/$1'
