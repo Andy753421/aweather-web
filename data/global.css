@@ -25,10 +25,12 @@ ul {
 
 /* Global styles */
 .content h1, h2 {
-	margin-top: 1em;
+	margin-top:    1.5em;
+	margin-bottom: 0.3em;
 }
 h3, h4, h5, h6 {
-	margin-top: 0.5em;
+	margin-top: 0.8em;
+	margin-bottom: 0.1em;
 }
 .quote {
 	font-style: italic;
@@ -43,7 +45,7 @@ h3, h4, h5, h6 {
 	content: '”';
 }
 ul {
-	left: 30px;
+	padding-left: 30px;
 }
 span.code {
 	font-family: monospace;
@@ -67,9 +69,10 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	font-family: 'DejaVu Sans Condensed', Arial, sans-serif;
+	font-size:   0.8em;
+	line-height: 1.5em;
 	width: 850px;
 	/* width: 80%; */
-
 }
 
 /* Header stuff */
@@ -201,6 +204,7 @@ body {
 	z-index: 1;
 	height: 62px;
 	color: white;
+	font-size: 11pt;
 	padding: 8px 10px 8px 10px;
 	background-image: url("../images/dl-bg.png");
 	border-radius: 10px;
@@ -231,7 +235,7 @@ body {
 
 /* Screnshots */
 .gallery {
-	left: 0px; /* override ul */
+	padding: 0px; /* override ul */
 	margin: 20px;
 	font-size: larger;
 }
