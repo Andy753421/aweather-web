@@ -59,6 +59,14 @@ div.code {
 	font-weight: bold;
 }
 
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin-left:   10px;
+}
+
 /* Layout */
 body {
 	background: fixed;
@@ -270,10 +278,8 @@ body {
 }
 .news dt {
 	clear: both;
-	font-weight: bold;
 }
 .news dd {
-	margin-left:   10px;
 	margin-bottom: 15px;
 }
 .note { 

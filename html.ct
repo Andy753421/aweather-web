@@ -35,7 +35,7 @@ Content-Type: text/html; charset=UTF-8
 			<h2 class="nav">
 				<% for (int i = 0; header[i].link; i++) print_nav(&header[i], page); %>
 				<span class="sep"></span>
-				<% print_nav(&grits[0], page); %>
+				<% for (int i = 0; other[i].link;  i++) print_nav(&other[i],  page); %>
 			</h2>
 		</div>
 		<div class="content">
@@ -199,7 +199,11 @@ Content-Type: text/html; charset=UTF-8
 	<ul>
 		<li class="linux"><dl class="inline">
 			<dt>Source code</dt>
-			<dd><a href="files/aweather-<%= VERSION %>.tar.gz">aweather-<%= VERSION %>.tar.gz</a></dd>
+			<dd>
+			<a href="files/aweather-<%= VERSION %>.tar.gz">aweather-<%= VERSION %>.tar.gz</a>,
+			<a href="../grits/grits-<%= VERSION %>.tar.gz">grits-<%= VERSION %>.tar.gz</a>,
+			<a href="files/rsl-1.40.tar.gz">rsl-1.40.tar.gz</a>
+			</dd>
 
 			<dt>Gentoo</dt>
 			<dd>Emerge <span class="code">sci-geosciences/aweather</span> from the sunrise overlay</dd>
@@ -215,7 +219,7 @@ Content-Type: text/html; charset=UTF-8
 			<dd><a href="files/aweather-<%= VERSION_WIN32 %>.exe">aweather-<%= VERSION_WIN32 %>.exe</a> (Use this if you know what you're doing)</dd>
 		</dl></li>
 		<li class="macos" style="padding-top: .8em; padding-bottom: .8em"><dl class="inline">
-			<dt>Mac OSX</dt>
+			<dt>Mac OS X</dt>
 			<dd>Coming soon (hopefully)</dd>
 		</dl></li>
 	</ul>
@@ -310,6 +314,35 @@ Content-Type: text/html; charset=UTF-8
 	</ul>
 <% } %>
 
+<% void print_rsl(void) { %>
+	<h2>Radar Software Library</h2>
+	AWeather uses a custom version of the
+	<a href="http://trmm-fc.gsfc.nasa.gov/trmm_gv/software/rsl/">TRMM Radar Software Library</a>
+	for accessing Level-II radar files.
+
+	<h2>Changes</h2>
+	<ul>
+		<li>Dual Pole support</li>
+		<li>Added additional radars</li>
+		<li>Improved code organization</li>
+		<li>Fixed most compiler warnings</li>
+		<li>Miscellaneous bug fixes</li>
+	</ul>
+
+	<h2>Download</h2>
+	<h3>TRMM version</h3>
+	<ul>
+		<li><a href="http://trmm-fc.gsfc.nasa.gov/trmm_gv/software/rsl/">TRMM RSL Website</a></li>
+		<li><a href="ftp://trmm-fc.gsfc.nasa.gov/software/rsl-v1.40.tar.gz">rsl-v1.40.tar.gz</a></li>
+	</ul>
+	<h3>AWeather's version</h3>
+	<ul>
+		<li><a href="files/rsl-1.40.tar.gz">rsl-1.40.tar.gz</a></li>
+		<li><a href="/git/?p=~spenceal/rsl">Gitweb</a></li>
+		<li><div class="code">git clone git://lug.rose-hulman.edu/~spenceal/rsl</div></li>
+	</ul>
+<% } %>
+
 <% /* Footer Pages */ %>
 <% void print_contact(void) { %>
 	<h1>Contact</h1>
@@ -328,7 +361,7 @@ Content-Type: text/html; charset=UTF-8
 		another weather dockapp that displays a pre-computed forecast.
 		It is designed to be an easy to use program that integrates a
 		variety of weather data in simple unified interface; see
-		<a href="features">features</a> for more details.
+		<a href="about">about</a> page for more details.
 	</p>
 	<hr />
 	<div class="buttons">

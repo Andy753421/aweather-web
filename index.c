@@ -10,20 +10,21 @@ page_t header[] = {
 	{"development", "Development", print_development},
 	{NULL,          NULL,          NULL},
 };
-page_t grits[] = {
-	{"grits",   "Grits",   print_grits},
-	{NULL,      NULL,      NULL},
+page_t other[] = {
+	{"grits",       "Grits",       print_grits},
+	{"rsl",         "RSL",         print_rsl},
+	{NULL,          NULL,          NULL},
 };
 page_t footer[] = {
-	{"contact", "Contact", print_contact},
-	{NULL,      NULL,      NULL},
+	{"contact",     "Contact",     print_contact},
+	{NULL,          NULL,          NULL},
 };
 page_t special[] = {
-	{"index.cgi", NULL,        print_index},
-	{"notfound",  "Not found", print_notfound},
-	{NULL,        NULL,        NULL},
+	{"index.cgi",   NULL,          print_index},
+	{"notfound",    "Not found",   print_notfound},
+	{NULL,          NULL,          NULL},
 };
-page_t *everything[] = {header, grits, footer, special, NULL};
+page_t *everything[] = {header, other, footer, special, NULL};
 const page_t *index    = &special[0];
 const page_t *notfound = &special[1];
 

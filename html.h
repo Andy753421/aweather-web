@@ -14,7 +14,7 @@ typedef struct {
 
 /* Data */
 extern page_t header[];
-extern page_t grits[];
+extern page_t other[];
 extern page_t footer[];
 extern page_t special[];
 
@@ -29,6 +29,7 @@ void print_screenshots(void);
 void print_download(void);
 void print_development(void);
 void print_grits(void);
+void print_rsl(void);
 
 void print_contact(void);
 void print_legal(void);
