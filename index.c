@@ -16,7 +16,6 @@ page_t grits[] = {
 };
 page_t footer[] = {
 	{"contact", "Contact", print_contact},
-	{"legal",   "Legal",   print_legal},
 	{NULL,      NULL,      NULL},
 };
 page_t special[] = {

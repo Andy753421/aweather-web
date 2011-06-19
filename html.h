@@ -1,3 +1,10 @@
+#define VERSION        "0.5"
+#define VERSION_LINUX  VERSION
+#define VERSION_GENTOO "0.4.1"
+#define VERSION_DEBIAN "0.4.2"
+#define VERSION_WIN32  VERSION
+#define VERSION_MACOS  "0"
+
 /* Types */
 typedef struct {
 	const char *link;

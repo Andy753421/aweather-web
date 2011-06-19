@@ -39,8 +39,10 @@ Content-Type: text/html; charset=UTF-8
 			</h2>
 		</div>
 		<div class="content">
-			<p class="msg">This site is currently under construction.</p>
-			<p class="msg" style="font-size:8pt; font-weight:normal;">If I had an animated GIF of a guy with a shovel, I would put it here.</p>
+			<!--
+				<p class="msg">This site is currently under construction.</p>
+				<p class="msg" style="font-size:8pt; font-weight:normal;">If I had an animated GIF of a guy with a shovel, I would put it here.</p>
+			-->
 			<% page->print(); %>
 			<div style="clear:both;"></div>
 		</div>
@@ -57,40 +59,46 @@ Content-Type: text/html; charset=UTF-8
 <% /* Normal Pages */ %>
 <% void print_about(void) { %>
 	<p class="intro">
-	To the best of my knowledge, all the weather related programs currently
-	available for Linux are either very simple and provide little
-	meteorological information or are huge, ancient, or proprietary beasts
-	created for the National Weather Service. AWeather is made to fill the
-	gap by providing lots of weather information while still using standard
-	free software practices. As such, the research focus of this software
-	is weather, not creative way to write software.
+		AWeather is a free/open source application which has been
+		designed to integrate and visualize high-quality meteorological
+		data using an interactive Virtual Globe interface suitable for
+		a wide range of users including weather enthusiasts, academics,
+		and professionals.
+
+		It is designed to provide more information than is typically
+		available from weather widgets and simple desktop applications.
+		At the same time, it strives to be simpler and easier to use
+		than existing meteorological software packages such as GEMPAK
+		and IDV.
 	</p>
 	<hr />
-	<h2>Intended Features</h2>
+	<h2>Features</h2>
 	<ul>
 		<li>High quality data sources
 		    (Level-II archive, etc)</li>
-		<li>3D Volume browser (todo)</li>
-		<li>GTK+ User Interface</li>
+		<li>3D Volume browser</li>
+		<li>Storm motion animations (todo)</li>
 		<li>API for algorithms
 		    (vortex/hail signatures, rain-rate, etc)
 		    (todo)</li>
-		<li>Other?</li>
+		<li>Other? (open to suggestions)</li>
 	</ul>
 
-	<h2>Status</h2>
-	<p class="quote">Now that it's spring again, progress on AWeather is continuing.</p>
 	<h3>Working</h3>
 	<ul>
-		<li>Level-II and Conus NEXRAD imagery</li>
-		<li>Real-time and offline mode</li>
+		<li>High quality data sources<ul>
+			<li>Level-II archives</li>
+			<li>Conus NEXRAD imagery</li>
+			<li>Volume display</li>
+		</ul></li>
 		<li>Virtual Globe base rendering<ul>
 			<li>Including terrain, satellite, and map imagery</li>
 		</ul></li>
+		<li>Real-time and offline mode</li>
 		<li>Auto-updating</li>
-		<li>volume display</li>
+		<li>Fullscreen mode</li>
 	</ul>
-	<h3>Todo</h3>
+	<h3>Planned</h3>
 	<ul>
 		<li>Vertical cross sections</li>
 		<li>Derived NEXRAD data (storm relative motion, echo tops, compost reflective, etc)</li>
@@ -100,7 +108,25 @@ Content-Type: text/html; charset=UTF-8
 <% } %>
 
 <% void print_news(void) { %>
+	<p class="quote">Now that it's spring again, progress on AWeather is continuing.</p>
 	<dl class="news">
+		<dt>2011-06-19</dt>
+		<dd>
+			AWeather 0.5 released: <ul>
+				<li>Support for volume rendering (isosurfaces)</li>
+				<li>Automatically update</li>
+				<li>Fullscreen mode</li>
+				<li>Dropped GtkGLExt</li>
+			</ul>
+			Forked RSL:<ul>
+				<li>Added additional radars</li>
+				<li>Fixed lots of bugs</li>
+				<li>General code cleanup</li>
+				<li>Available from <a href="files/">files</a> directory
+				    and <a href="/git/?p=~spenceal/rsl">git</a></li>
+			</ul>
+		</dd>
+
 		<dt>2011-06-13</dt>
 		<dd>Started work on this new website. Lots of progress in AWeather as well:<ul>
 			<li>Merged support for isosurfaces to the main branch (Finally!)</li>
@@ -139,9 +165,8 @@ Content-Type: text/html; charset=UTF-8
 <% } %>
 
 <% void print_screenshots(void) { %>
-	<br />
 	<p>
-		AWeather provides consistent user interface that allows the
+		AWeather provides a consistent user interface that allows the
 		user to zoom in from a high level view of the entire Earth down
 		to regional and microscale views.
 	</p>
@@ -166,7 +191,7 @@ Content-Type: text/html; charset=UTF-8
 <% } %>
 
 <% void print_download(void) { %>
-	<h2>Stable release</h2>
+	<h2>Stable releases</h2>
 	<p class="note">
 		While AWeather won't be considered stable until version 1.0,<br />
 		these are as close to stable as you can get until then
@@ -174,7 +199,7 @@ Content-Type: text/html; charset=UTF-8
 	<ul>
 		<li class="linux"><dl class="inline">
 			<dt>Source code</dt>
-			<dd><a href="files/aweather-0.4.2.tar.gz">aweather-0.4.2.tar.gz</a></dd>
+			<dd><a href="files/aweather-<%= VERSION %>.tar.gz">aweather-<%= VERSION %>.tar.gz</a></dd>
 
 			<dt>Gentoo</dt>
 			<dd>Emerge <span class="code">sci-geosciences/aweather</span> from the sunrise overlay</dd>
@@ -184,29 +209,30 @@ Content-Type: text/html; charset=UTF-8
 		</dl></li>
 		<li class="windows"><dl class="inline">
 			<dt>Windows</dt>
-			<dd><a href="files/aweather-0.4.2-gtk.exe">aweather-0.4.2-gtk.exe</a></dd>
+			<dd><a href="files/aweather-<%= VERSION_WIN32 %>-gtk.exe">aweather-<%= VERSION_WIN32 %>-gtk.exe</a></dd>
 
-			<dt>Update only</dt>
-			<dd><a href="files/aweather-0.4.2.exe">aweather-0.4.2.exe</a></dd>
+			<dt>Without GTK</dt>
+			<dd><a href="files/aweather-<%= VERSION_WIN32 %>.exe">aweather-<%= VERSION_WIN32 %>.exe</a> (Use this if you know what you're doing)</dd>
 		</dl></li>
-		<li class="macos" style="padding-top: .8em; padding-bottom: .8em">
-			Coming soon (hopefully)
-		</li>
+		<li class="macos" style="padding-top: .8em; padding-bottom: .8em"><dl class="inline">
+			<dt>Mac OSX</dt>
+			<dd>Coming soon (hopefully)</dd>
+		</dl></li>
 	</ul>
 
 	<h2>Unstable releases</h2>
 	<p class="note">Pre-releases, betas, and other hazardous software</p>
 	<div style="margin-left: 30px;">
 		<p>Check out the <a href="files">files</a> directory for any potential updates</p>
-		<p>Pre-releases are labeled with a -p0 and are mainly build for testing the Windows packages</p>
+		<p>Pre-releases are labeled with a -p0 and are mainly built for testing the Windows packages</p>
 	</div>
 
 	<h2>Development code</h2>
 	<p class="note">
-		Development code is available from Git, and from gitweb
-		(<a href="/git/?=proj/aweather">AWeather</a>,
-		 <a href="/git/?=proj/grits">Grits</a>, 
-		 <a href="/git/?=~spenceal/rsl">RSL</a>)
+		Development code is available from Git, and gitweb
+		(<a href="/git/?p=proj/aweather">AWeather</a>,
+		 <a href="/git/?p=proj/grits">Grits</a>, 
+		 <a href="/git/?p=~spenceal/rsl">RSL</a>)
 	</p>
 	<div style="margin-left: 30px;">
 		<div class="code">git clone git://lug.rose-hulman.edu/proj/aweather</div>
@@ -225,8 +251,8 @@ Content-Type: text/html; charset=UTF-8
 
 	<h2>Bug report and feature requests</h2>
 	<div style="margin-left: 30px;">
-		<p><a href="/code/projects/aweather/issues/new">New issue</a></p>
-		<p><a href="/code/projects/aweather/issues">Open issues</a></p>
+		<p><a href="/code/projects/aweather/issues">List of current issues</a></p>
+		<p><a href="/code/projects/aweather/issues/new">Add a new issue</a></p>
 	</div>
 
 	<h2>How to contribute?</h2>
@@ -237,33 +263,36 @@ Content-Type: text/html; charset=UTF-8
 		<li>Make better logo!</li>
 	</ul>
 
-	<h2>Building AWeather</h2>
-	<p class="note">See the <a href="code/projects/aweather/wiki/Install">install</a> wiki page for more details</p>
-	<ul>
-		<li>AWeather has direct dependencies on Grits, and RSL, among other things.</li>
-		<li>Currently building AWeather will require the exact same version of
-		    Grits to be installed, but this may change in the near future as
-		    the software stabilizes.</li>
-	</ul>
-	
 	<h2>Architecture Overview</h2>
 	<ul>
 		<li>Built on top of GObject and GTK+</li>
-		<li>Uses the Grits "Virtual Globe" library for much of the graphics work.<br />
-		    Grits also provides some other generic functionality and a plugin API.</li>
+		<li>Uses the <a href="grits">Grits</a> "Virtual Globe" library<ul>
+			<li>Handles most of the graphics work using OpenGL for rendering</li>
+			<li>Provides some other generic functionality, such as data access</li>
+			<li>Also provides the plugins API used by AWeather</li>
+		</ul></li>
 		<li>AWeather itself is a front-end for grits along with a
-		    bundle of weather related plugins.</li>
+		    bundle of weather related plugins</li>
+	</ul>
+
+	<h2>Building AWeather</h2>
+	<p class="note">See the <a href="code/projects/aweather/wiki/Install">install</a> wiki page for more details</p>
+	<ul>
+		<li>AWeather has direct dependencies on Grits, RSL, among other things</li>
+		<li>Currently building and running AWeather will require the
+		    exact same version of Grits to be installed<br />
+		    (This may change in the near future as the software stabilizes)</li>
 	</ul>
 <% } %>
 
 <% void print_grits(void) { %>
-	<h1>Grits</h1>
 	<p>Grits is a Virtual Globe library developed along side AWeather, but
 	   can be used by other programs as well.</p>
 	<p>It is differentiated from other Virtual Globes such as Google Earth,
 	   NASA World Wind, and KDE Marble in that it is developed as a library
 	   that is used by other programs, such as AWeather, rather than
 	   providing a user interface that is used directly.</p>
+	<hr />
 	<ul class="gallery">
 		<li>
 			<% print_screen("grits"); %>
@@ -291,43 +320,36 @@ Content-Type: text/html; charset=UTF-8
 	</dl>
 <% } %>
 
-<% void print_legal(void) { %>
-	<h1>Legal</h1>
-<% } %>
-
 <% /* Special Pages */ %>
 <% void print_index(void) { %>
 	<p class="intro">
 		AWeather is designed to be an advanced weather program which is
 		designed to be used by weather enthusiasts. AWeather is not
-		another weather dockapp that simply displays a pre-computed
-		forecast. It is designed to be an easy to use program that
-		integrates a variety of weather data in simple unified
-		interface; see features for more details.
+		another weather dockapp that displays a pre-computed forecast.
+		It is designed to be an easy to use program that integrates a
+		variety of weather data in simple unified interface; see
+		<a href="features">features</a> for more details.
 	</p>
 	<hr />
-	<% print_screen("meso"); %>
 	<div class="buttons">
-		<a class="download" href="">
+		<a class="download" href="download">
 			<span>Download</span>
-			<span>AWeather 0.5-p0 source</span>
-			<img src="images/dl-arrow.png" alt="Download" />
-		</a>
-		<a class="download" href="">
-			<span>Download</span>
-			<span>AWeather 0.5-p0 source</span>
+			<span>AWeather <%= VERSION %></span>
 			<img src="images/dl-arrow.png" alt="Download" />
 		</a>
 	</div>
-	<b>Features:</b>
+	<% print_screen("meso"); %>
 	<ul>
-		<li>Detailed Level-II radar</li>
-		<li>3D volume rendering</li>
-		<li>Dual-pole support</li>
+		<li>Detailed Level-II radar<ul>
+			<li>3D volume rendering</li>
+			<li>Dual-pole support</li>
+		</ul></li>
+		<li>Online and offline modes<ul>
+			<li>Data caching</li>
+			<li>Automatic updating</li>
+		</ul></li>
 		<li>Surface and map overlays</li>
 		<li>Terrain rendering</li>
-		<li>Online and offline modes with
-		    caching and automatic updating</li>
 	</ul>
 <% } %>
 
