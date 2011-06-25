@@ -23,10 +23,13 @@ Content-Type: text/html; charset=UTF-8
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
 	<head> 
 		<title>AWeather<% if (page->name) printf(" - %s", page->name); %></title> 
-		<meta http-equiv="X-UA-Compatible" content="IE=9" />
-		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" /> 
 		<link rel="shortcut icon" href="images/aweather.ico" />
 		<link href="data/global.css" rel="stylesheet" type="text/css" />
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" /> 
+		<meta name="keywords" content="weather, radar, nexrad, level-ii, virtual globe, grits, rsl" >
+		<meta name="description" content="AWeather is a free advanced real-time weather data viewer
+			that supports Level-II NEXRAD files, polarimetric radars, and volume rendering." >
 	</head> 
 	<body> 
 		<div class="top">
@@ -41,7 +44,8 @@ Content-Type: text/html; charset=UTF-8
 		<div class="content">
 			<!--
 				<p class="msg">This site is currently under construction.</p>
-				<p class="msg" style="font-size:8pt; font-weight:normal;">If I had an animated GIF of a guy with a shovel, I would put it here.</p>
+				<p class="msg" style="font-size:8pt; font-weight:normal;">
+				  If I had an animated GIF of a guy with a shovel, I would put it here.</p>
 			-->
 			<% page->print(); %>
 			<div style="clear:both;"></div>
@@ -72,39 +76,45 @@ Content-Type: text/html; charset=UTF-8
 		and IDV.
 	</p>
 	<hr />
+	<h2>Licencing</h2>
+	<p>AWeather is free software licensed under the terms of the 
+	   <a href="http://www.gnu.org/licenses/gpl.html">GNU GPL</a>.
+	   As such, it can be used by any individuals or organizations
+	   without any license fees or royalties.</p>
+	
 	<h2>Features</h2>
-	<ul>
-		<li>High quality data sources
-		    (Level-II archive, etc)</li>
-		<li>3D Volume browser</li>
-		<li>Storm motion animations (todo)</li>
-		<li>API for algorithms
-		    (vortex/hail signatures, rain-rate, etc)
-		    (todo)</li>
-		<li>Other? (open to suggestions)</li>
-	</ul>
-
-	<h3>Working</h3>
-	<ul>
-		<li>High quality data sources<ul>
-			<li>Level-II archives</li>
-			<li>Conus NEXRAD imagery</li>
-			<li>Volume display</li>
-		</ul></li>
-		<li>Virtual Globe base rendering<ul>
-			<li>Including terrain, satellite, and map imagery</li>
-		</ul></li>
-		<li>Real-time and offline mode</li>
-		<li>Auto-updating</li>
-		<li>Fullscreen mode</li>
-	</ul>
-	<h3>Planned</h3>
-	<ul>
-		<li>Vertical cross sections</li>
-		<li>Derived NEXRAD data (storm relative motion, echo tops, compost reflective, etc)</li>
-		<li>Additional data sources (watch/warning boxes, surface data, etc)</li>
-		<li>Animation</li>
-	</ul>
+	<div class="col">
+		<h3>Working</h3>
+		<ul>
+			<li>High quality data sources<ul>
+				<li>Level-II archives</li>
+				<li>Conus NEXRAD imagery</li>
+				<li>Volume display of dBZ iso surfaces</li>
+			</ul></li>
+			<li>Virtual Globe base rendering<ul>
+				<li>Including terrain, satellite, and map imagery</li>
+			</ul></li>
+			<li>Real-time and offline mode</li>
+			<li>Auto-updating</li>
+			<li>Fullscreen mode</li>
+		</ul>
+	</div>
+	<div class="col">
+		<h3>Planned</h3>
+		<ul>
+			<li>Additional data sources<ul>
+				<li>Watch/warning/advisory boxes</li>
+				<li>Surface data (temp., humidity, etc)</li>
+			</ul></li>
+			<li>Derived NEXRAD data<ul>
+				<li>Storm relative motion</li>
+				<li>Compost reflective</li>
+				<li>Echo tops</li>
+			</ul></li>
+			<li>Vertical cross sections</li>
+			<li>Animation</li>
+		</ul>
+	</div>
 <% } %>
 
 <% void print_news(void) { %>
@@ -125,6 +135,8 @@ Content-Type: text/html; charset=UTF-8
 				<li>Available from <a href="files/">files</a> directory
 				    and <a href="/git/?p=~spenceal/rsl">git</a></li>
 			</ul>
+			<b>Update:</b> AWeather 0.5 is also compatible with the
+			newly released RSL v1.41</li>
 		</dd>
 
 		<dt>2011-06-13</dt>
@@ -170,6 +182,7 @@ Content-Type: text/html; charset=UTF-8
 		user to zoom in from a high level view of the entire Earth down
 		to regional and microscale views.
 	</p>
+	<hr />
 	<ul class="gallery">
 		<li>
 			<% print_screen("synop"); %>
@@ -216,7 +229,8 @@ Content-Type: text/html; charset=UTF-8
 			<dd><a href="files/aweather-<%= VERSION_WIN32 %>-gtk.exe">aweather-<%= VERSION_WIN32 %>-gtk.exe</a></dd>
 
 			<dt>Without GTK</dt>
-			<dd><a href="files/aweather-<%= VERSION_WIN32 %>.exe">aweather-<%= VERSION_WIN32 %>.exe</a> (Use this if you know what you're doing)</dd>
+			<dd><a href="files/aweather-<%= VERSION_WIN32 %>.exe">aweather-<%= VERSION_WIN32 %>.exe</a>
+				(Use this if you know what you're doing)</dd>
 		</dl></li>
 		<li class="macos" style="padding-top: .8em; padding-bottom: .8em"><dl class="inline">
 			<dt>Mac OS X</dt>
@@ -280,7 +294,8 @@ Content-Type: text/html; charset=UTF-8
 	</ul>
 
 	<h2>Building AWeather</h2>
-	<p class="note">See the <a href="code/projects/aweather/wiki/Install">install</a> wiki page for more details</p>
+	<p class="note">See the <a href="code/projects/aweather/wiki/Install">install</a>
+		wiki page for more details</p>
 	<ul>
 		<li>AWeather has direct dependencies on Grits, RSL, among other things</li>
 		<li>Currently building and running AWeather will require the
@@ -316,31 +331,29 @@ Content-Type: text/html; charset=UTF-8
 
 <% void print_rsl(void) { %>
 	<h2>Radar Software Library</h2>
-	AWeather uses a custom version of the
+	AWeather has at times needed a custom version of the
 	<a href="http://trmm-fc.gsfc.nasa.gov/trmm_gv/software/rsl/">TRMM Radar Software Library</a>
-	for accessing Level-II radar files.
-
-	<h2>Changes</h2>
-	<ul>
-		<li>Dual Pole support</li>
-		<li>Added additional radars</li>
-		<li>Improved code organization</li>
-		<li>Fixed most compiler warnings</li>
-		<li>Miscellaneous bug fixes</li>
-	</ul>
+	for accessing Level-II radar files. However, most of the changes have
+	since been incorporated into RSL Version 1.41, which can also be used
+	with AWeather. Some remaining changes exist though and are mostly
+	related to code organization and fixing compiler warnings.
 
 	<h2>Download</h2>
-	<h3>TRMM version</h3>
-	<ul>
-		<li><a href="http://trmm-fc.gsfc.nasa.gov/trmm_gv/software/rsl/">TRMM RSL Website</a></li>
-		<li><a href="ftp://trmm-fc.gsfc.nasa.gov/software/rsl-v1.40.tar.gz">rsl-v1.40.tar.gz</a></li>
-	</ul>
-	<h3>AWeather's version</h3>
-	<ul>
-		<li><a href="files/rsl-1.40.tar.gz">rsl-1.40.tar.gz</a></li>
-		<li><a href="/git/?p=~spenceal/rsl">Gitweb</a></li>
-		<li><div class="code">git clone git://lug.rose-hulman.edu/~spenceal/rsl</div></li>
-	</ul>
+	<div class="col">
+		<h3>NASA/TRMM version</h3>
+		<ul>
+			<li><a href="http://trmm-fc.gsfc.nasa.gov/trmm_gv/software/rsl/">TRMM RSL Website</a></li>
+			<li><a href="ftp://trmm-fc.gsfc.nasa.gov/software/rsl-v1.41.tar.gz">rsl-v1.41.tar.gz</a></li>
+		</ul>
+	</div>
+	<div class="col">
+		<h3>AWeather's version</h3>
+		<ul>
+			<li><a href="files/rsl-1.40.tar.gz">rsl-1.40.tar.gz</a></li>
+			<li><a href="/git/?p=~spenceal/rsl">Gitweb</a></li>
+			<li><div class="code">git clone git://lug.rose-hulman.edu/~spenceal/rsl</div></li>
+		</ul>
+	</div>
 <% } %>
 
 <% /* Footer Pages */ %>
@@ -356,24 +369,15 @@ Content-Type: text/html; charset=UTF-8
 <% /* Special Pages */ %>
 <% void print_index(void) { %>
 	<p class="intro">
-		AWeather is designed to be an advanced weather program which is
-		designed to be used by weather enthusiasts. AWeather is not
-		another weather dockapp that displays a pre-computed forecast.
+		AWeather is a free advanced weather data viewer designed for weather enthusiasts.
+		AWeather is not a simple weather widget/dockapp that displays a pre-computed forecast.
 		It is designed to be an easy to use program that integrates a
-		variety of weather data in simple unified interface; see
-		<a href="about">about</a> page for more details.
+		variety of weather data in simple unified interface;
+		see the <a href="about">about</a> page for more details.
 	</p>
 	<hr />
-	<div class="buttons">
-		<a class="download" href="download">
-			<span>Download</span>
-			<span>AWeather <%= VERSION %></span>
-			<img src="images/dl-arrow.png" alt="Download" />
-		</a>
-	</div>
-	<% print_screen("meso"); %>
-	<ul>
-		<li>Detailed Level-II radar<ul>
+	<ul style="float: left;">
+		<li>Detailed Level-II NEXRAD radar<ul>
 			<li>3D volume rendering</li>
 			<li>Dual-pole support</li>
 		</ul></li>
@@ -384,6 +388,14 @@ Content-Type: text/html; charset=UTF-8
 		<li>Surface and map overlays</li>
 		<li>Terrain rendering</li>
 	</ul>
+	<div style="float: left; margin-left: 20px;">
+		<% print_screen("meso"); %>
+	</div>
+	<a href="download" class="download" style="float: right;">
+		<span>Download</span>
+		<span>AWeather <%= VERSION %></span>
+		<img src="images/dl-arrow.png" alt="Download" />
+	</a>
 <% } %>
 
 <% void print_notfound(void) { %>

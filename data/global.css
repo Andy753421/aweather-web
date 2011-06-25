@@ -64,7 +64,12 @@ dt {
 }
 
 dd {
-	margin-left:   10px;
+	margin-left: 10px;
+}
+
+.col {
+	float: left;
+	margin:  -10px 30px 0px 20px;
 }
 
 /* Layout */
@@ -199,8 +204,6 @@ body {
  ***********************/
 /* Index page */
 .buttons {
-	float: right;
-	width: 200px;
 	margin-left: 25px;
 }
 
@@ -213,6 +216,7 @@ body {
 	display: block;
 	z-index: 1;
 	height: 62px;
+	width: 150px;
 	color: white;
 	font-size: 11pt;
 	text-decoration: none;
