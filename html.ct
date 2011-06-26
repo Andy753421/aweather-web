@@ -28,7 +28,7 @@ Content-Type: text/html; charset=UTF-8
 		<meta http-equiv="X-UA-Compatible" content="IE=9" />
 		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" /> 
 		<meta name="keywords" content="weather, radar, nexrad, level-ii, virtual globe, grits, rsl" >
-		<meta name="description" content="AWeather is a free advanced real-time weather data viewer
+		<meta name="description" content="AWeather is a free real-time weather data viewer
 			that supports Level-II NEXRAD files, polarimetric radars, and volume rendering." >
 	</head> 
 	<body> 
@@ -76,11 +76,6 @@ Content-Type: text/html; charset=UTF-8
 		and IDV.
 	</p>
 	<hr />
-	<h2>Licencing</h2>
-	<p>AWeather is free software licensed under the terms of the 
-	   <a href="http://www.gnu.org/licenses/gpl.html">GNU GPL</a>.
-	   As such, it can be used by any individuals or organizations
-	   without any license fees or royalties.</p>
 	
 	<h2>Features</h2>
 	<div class="col">
@@ -115,6 +110,13 @@ Content-Type: text/html; charset=UTF-8
 			<li>Animation</li>
 		</ul>
 	</div>
+
+	<div style="clear:both;"></div>
+	<h2>Licencing</h2>
+	<p>AWeather is free software licensed under the terms of the 
+	   <a href="http://www.gnu.org/licenses/gpl.html">GNU GPL</a>.
+	   As such, it can be used by any individuals or organizations
+	   without any license fees or royalties.</p>
 <% } %>
 
 <% void print_news(void) { %>
@@ -124,7 +126,7 @@ Content-Type: text/html; charset=UTF-8
 		<dd>
 			AWeather 0.5 released: <ul>
 				<li>Support for volume rendering (isosurfaces)</li>
-				<li>Automatically update</li>
+				<li>Automatic updating</li>
 				<li>Fullscreen mode</li>
 				<li>Dropped GtkGLExt</li>
 			</ul>
@@ -133,7 +135,7 @@ Content-Type: text/html; charset=UTF-8
 				<li>Fixed lots of bugs</li>
 				<li>General code cleanup</li>
 				<li>Available from <a href="files/">files</a> directory
-				    and <a href="/git/?p=~spenceal/rsl">git</a></li>
+				    and <a href="<%= GW_RSL %>">git</a></li>
 			</ul>
 			<b>Update:</b> AWeather 0.5 is also compatible with the
 			newly released RSL v1.41</li>
@@ -173,24 +175,24 @@ Content-Type: text/html; charset=UTF-8
 		    progress is being made on libgis, which is now able to display
 		    a virtual globe using data from NASA servers.</dd>
 	</dl>
-	<p class="note">See also: AWeather's <a href="/git/?p=proj/aweather">gitweb</a></p>
+	<p class="note">See also: AWeather's <a href="<%= GW_AWEATHER %>">gitweb</a></p>
 <% } %>
 
 <% void print_screenshots(void) { %>
 	<p>
 		AWeather provides a consistent user interface that allows the
 		user to zoom in from a high level view of the entire Earth down
-		to regional and microscale views.
+		to regional and mesoscale views.
 	</p>
-	<hr />
+
 	<ul class="gallery">
 		<li>
 			<% print_screen("synop"); %>
-			High level view using grits
+			High level view using Grits
 		</li>
 		<li>
 			<% print_screen("region"); %>
-			Regional view of a storm front
+			Regional view over the midwest
 		</li>
 		<li>
 			<% print_screen("meso"); %>
@@ -206,7 +208,7 @@ Content-Type: text/html; charset=UTF-8
 <% void print_download(void) { %>
 	<h2>Stable releases</h2>
 	<p class="note">
-		While AWeather won't be considered stable until version 1.0,<br />
+		While AWeather won't be considered stable until version 1.0,
 		these are as close to stable as you can get until then
 	</p>
 	<ul>
@@ -222,19 +224,19 @@ Content-Type: text/html; charset=UTF-8
 			<dd>Emerge <span class="code">sci-geosciences/aweather</span> from the sunrise overlay</dd>
 
 			<dt>Debian</dt>
-			<dd>Packaging in progress, check back soon</dd>
+			<dd><a href="debian/<%= VERSION_DEBIAN %>/">.deb files</a>, further packaging in progress</dd>
 		</dl></li>
 		<li class="windows"><dl class="inline">
 			<dt>Windows</dt>
-			<dd><a href="files/aweather-<%= VERSION_WIN32 %>-gtk.exe">aweather-<%= VERSION_WIN32 %>-gtk.exe</a></dd>
+			<dd><a href="files/aweather-<%= VERSION_WIN32 %>-gtk.exe">aweather-<%= VERSION_WIN32 %>-gtk.exe</a>
+				(Use this if you know what you're doing)</dd>
 
 			<dt>Without GTK</dt>
-			<dd><a href="files/aweather-<%= VERSION_WIN32 %>.exe">aweather-<%= VERSION_WIN32 %>.exe</a>
-				(Use this if you know what you're doing)</dd>
+			<dd><a href="files/aweather-<%= VERSION_WIN32 %>.exe">aweather-<%= VERSION_WIN32 %>.exe</a></dd>
 		</dl></li>
 		<li class="macos" style="padding-top: .8em; padding-bottom: .8em"><dl class="inline">
 			<dt>Mac OS X</dt>
-			<dd>Coming soon (hopefully)</dd>
+			<dd>Coming soon (Mac OS developer? <a href="/code/issues/1">Help out</a>)</dd>
 		</dl></li>
 	</ul>
 
@@ -247,15 +249,16 @@ Content-Type: text/html; charset=UTF-8
 
 	<h2>Development code</h2>
 	<p class="note">
-		Development code is available from Git, and gitweb
-		(<a href="/git/?p=proj/aweather">AWeather</a>,
-		 <a href="/git/?p=proj/grits">Grits</a>, 
-		 <a href="/git/?p=~spenceal/rsl">RSL</a>)
+		Development code is available from Git
+		(and gitweb:
+		 <a href="<%= GW_AWEATHER %>">AWeather</a>,
+		 <a href="<%= GW_GRITS    %>">Grits</a>, 
+		 <a href="<%= GW_RSL      %>">RSL</a>)
 	</p>
 	<div style="margin-left: 30px;">
-		<div class="code">git clone git://lug.rose-hulman.edu/proj/aweather</div>
-		<div class="code">git clone git://lug.rose-hulman.edu/proj/grits</div>
-		<div class="code">git clone git://lug.rose-hulman.edu/~spenceal/rsl</div>
+		<div class="code">git clone <%= GIT_AWEATHER %></div>
+		<div class="code">git clone <%= GIT_GRITS    %></div>
+		<div class="code">git clone <%= GIT_RSL      %></div>
 	</div>
 <% } %>
 
@@ -263,14 +266,14 @@ Content-Type: text/html; charset=UTF-8
 	<!-- Open source mumbo jumbo.. -->
 
 	<p class="note" style="clear: both;">
-		The AWeather <a href="/code/projects/aweather/wiki">development wiki</a>
+		The AWeather <a href="<%= WIKI_INDEX %>">development wiki</a>
 		is the main resource for development material.
 	</p>
 
 	<h2>Bug report and feature requests</h2>
 	<div style="margin-left: 30px;">
-		<p><a href="/code/projects/aweather/issues">List of current issues</a></p>
-		<p><a href="/code/projects/aweather/issues/new">Add a new issue</a></p>
+		<p><a href="<%= BUG_LIST %>">List of current issues</a></p>
+		<p><a href="<%= BUG_NEW  %>">Add a new issue</a></p>
 	</div>
 
 	<h2>How to contribute?</h2>
@@ -289,29 +292,32 @@ Content-Type: text/html; charset=UTF-8
 			<li>Provides some other generic functionality, such as data access</li>
 			<li>Also provides the plugins API used by AWeather</li>
 		</ul></li>
-		<li>AWeather itself is a front-end for grits along with a
+		<li>AWeather itself is a front-end for Grits along with a
 		    bundle of weather related plugins</li>
 	</ul>
 
 	<h2>Building AWeather</h2>
-	<p class="note">See the <a href="code/projects/aweather/wiki/Install">install</a>
+	<p class="note">See the <a href="<%= WIKI_INSTALL %>">install</a>
 		wiki page for more details</p>
 	<ul>
 		<li>AWeather has direct dependencies on Grits, RSL, among other things</li>
-		<li>Currently building and running AWeather will require the
+		<li>Currently building and running AWeather requires the
 		    exact same version of Grits to be installed<br />
 		    (This may change in the near future as the software stabilizes)</li>
 	</ul>
 <% } %>
 
 <% void print_grits(void) { %>
-	<p>Grits is a Virtual Globe library developed along side AWeather, but
-	   can be used by other programs as well.</p>
-	<p>It is differentiated from other Virtual Globes such as Google Earth,
-	   NASA World Wind, and KDE Marble in that it is developed as a library
-	   that is used by other programs, such as AWeather, rather than
-	   providing a user interface that is used directly.</p>
-	<hr />
+	<p>
+		Grits is a Virtual Globe library developed along side AWeather,
+		but desigend to be usable by other program as well.
+
+		It is differentiated from other Virtual Globes such as Google
+		Earth, NASA World Wind, and KDE Marble in that it is developed
+		primairily as a library that is used by other programs, such as
+		AWeather, rather than providing it's own user interface.
+	</p>
+
 	<ul class="gallery">
 		<li>
 			<% print_screen("grits"); %>
@@ -332,26 +338,26 @@ Content-Type: text/html; charset=UTF-8
 <% void print_rsl(void) { %>
 	<h2>Radar Software Library</h2>
 	AWeather has at times needed a custom version of the
-	<a href="http://trmm-fc.gsfc.nasa.gov/trmm_gv/software/rsl/">TRMM Radar Software Library</a>
+	<a href="<%= RSL_WEB %>">TRMM Radar Software Library</a>
 	for accessing Level-II radar files. However, most of the changes have
 	since been incorporated into RSL Version 1.41, which can also be used
 	with AWeather. Some remaining changes exist though and are mostly
-	related to code organization and fixing compiler warnings.
+	related to code organization and compiler warnings.
 
 	<h2>Download</h2>
 	<div class="col">
 		<h3>NASA/TRMM version</h3>
 		<ul>
-			<li><a href="http://trmm-fc.gsfc.nasa.gov/trmm_gv/software/rsl/">TRMM RSL Website</a></li>
-			<li><a href="ftp://trmm-fc.gsfc.nasa.gov/software/rsl-v1.41.tar.gz">rsl-v1.41.tar.gz</a></li>
+			<li><a href="<%= RSL_WEB %>">TRMM RSL Website</a></li>
+			<li><a href="<%= RSL_FTP %>">rsl-v1.41.tar.gz</a></li>
 		</ul>
 	</div>
 	<div class="col">
 		<h3>AWeather's version</h3>
 		<ul>
 			<li><a href="files/rsl-1.40.tar.gz">rsl-1.40.tar.gz</a></li>
-			<li><a href="/git/?p=~spenceal/rsl">Gitweb</a></li>
-			<li><div class="code">git clone git://lug.rose-hulman.edu/~spenceal/rsl</div></li>
+			<li><a href="<%= GW_RSL %>">Gitweb</a></li>
+			<li><div class="code">git clone <%= GIT_RSL %></div></li>
 		</ul>
 	</div>
 <% } %>
@@ -361,6 +367,7 @@ Content-Type: text/html; charset=UTF-8
 	<h1>Contact</h1>
 	<p class="note">Questions? Comments? Trouble compiling AWeather?</p>
 	<dl class="inline small">
+		<dt>Bugs</dt> <dd><a href="<%= BUG_LIST %>">Issue Tracker</a> (sign in to add a new issue)</dd>
 		<dt>Email</dt><dd><a href="mailto:andy753421@gmail.com">Andy Spencer</a></dd>
 		<dt>IRC</dt>  <dd>#rhlug@irc.freenode.net</dd>
 	</dl>
@@ -369,10 +376,10 @@ Content-Type: text/html; charset=UTF-8
 <% /* Special Pages */ %>
 <% void print_index(void) { %>
 	<p class="intro">
-		AWeather is a free advanced weather data viewer designed for weather enthusiasts.
-		AWeather is not a simple weather widget/dockapp that displays a pre-computed forecast.
+		AWeather is a free real-time weather data viewer designed for weather enthusiasts.
+		AWeather is not a weather widget/dockapp that displays a pre-computed forecast.
 		It is designed to be an easy to use program that integrates a
-		variety of weather data in simple unified interface;
+		variety of meteorological data in simple unified interface;
 		see the <a href="about">about</a> page for more details.
 	</p>
 	<hr />
@@ -399,5 +406,9 @@ Content-Type: text/html; charset=UTF-8
 <% } %>
 
 <% void print_notfound(void) { %>
-	<h1>404 - Not found</h1>
+	<h1>Error 404 - Page Not found!</h1>
+	<br />
+	<p>This page does not exist!
+	<p>If Andy screwed up, feel free to <a href="contact">tell him</a>,
+	   otherwise, go away</p>
 <% } %>

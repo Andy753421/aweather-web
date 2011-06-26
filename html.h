@@ -1,9 +1,28 @@
+/* Version information */
 #define VERSION        "0.5"
 #define VERSION_LINUX  VERSION
-#define VERSION_GENTOO "0.4.1"
-#define VERSION_DEBIAN "0.4.2"
+#define VERSION_GENTOO VERSION
+#define VERSION_DEBIAN VERSION
 #define VERSION_WIN32  VERSION
 #define VERSION_MACOS  "0"
+
+/* Link info */
+#define WIKI_INDEX   "/code/projects/aweather/wiki"
+#define WIKI_INSTALL "/code/projects/aweather/wiki/Install"
+
+#define BUG_LIST     "/code/projects/aweather/issues"
+#define BUG_NEW      "/code/projects/aweather/issues/new"
+
+#define GIT_AWEATHER "git://lug.rose-hulman.edu/proj/aweather"
+#define GIT_GRITS    "git://lug.rose-hulman.edu/proj/grits"
+#define GIT_RSL      "git://lug.rose-hulman.edu/~spenceal/rsl"
+
+#define GW_AWEATHER  "/git/?p=proj/aweather"
+#define GW_GRITS     "/git/?p=proj/grits"
+#define GW_RSL       "/git/?p=~spenceal/rsl"
+
+#define RSL_WEB      "http://trmm-fc.gsfc.nasa.gov/trmm_gv/software/rsl/"
+#define RSL_FTP      "ftp://trmm-fc.gsfc.nasa.gov/software/rsl-v1.41.tar.gz"
 
 /* Types */
 typedef struct {
