@@ -18,20 +18,23 @@ Content-Type: text/html; charset=UTF-8
 <% } %>
 
 <% void print_page(const page_t *page) { %>
-<?xml version="1.0" encoding="UTF-8"?> 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
-	<head> 
-		<title>AWeather<% if (page->name) printf(" - %s", page->name); %></title> 
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>AWeather<% if (page->name) printf(" - %s", page->name); %></title>
 		<link rel="shortcut icon" href="images/aweather.ico" />
 		<link href="data/global.css" rel="stylesheet" type="text/css" />
 		<meta http-equiv="X-UA-Compatible" content="IE=9" />
-		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" /> 
-		<meta name="keywords" content="weather, radar, nexrad, level-ii, virtual globe, grits, rsl" >
-		<meta name="description" content="AWeather is a free real-time weather data viewer
-			that supports Level-II NEXRAD files, polarimetric radars, and volume rendering." >
-	</head> 
-	<body> 
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+		<meta name="keywords" content="weather, radar, nexrad, level-ii, virtual globe, grits, rsl" />
+		<% if (page->desc) { %>
+		<meta name="description" content="<%= page->desc %>" />
+		<% } %>
+		<meta name="google-site-verification" content="-SZkTpNRWHrpESTGNZ8Pshnz4zKbwfKv54NoavUKK_Y" />
+		<meta name="y_key" content="abe8287921b25151" />
+	</head>
+	<body>
 		<div class="top">
 			<a href="."><img class="logo" src="images/logo.png" alt="AWeather" /></a>
 			<h1 class="title"><a href=".">AWeather</a></h1>
@@ -56,8 +59,8 @@ Content-Type: text/html; charset=UTF-8
 				| <% print_nav(&footer[i], page); %>
 			<% } %>
 		</p>
-	</body> 
-</html> 
+	</body>
+</html>
 <% } %>
 
 <% /* Normal Pages */ %>
@@ -76,7 +79,7 @@ Content-Type: text/html; charset=UTF-8
 		and IDV.
 	</p>
 	<hr />
-	
+
 	<h2>Features</h2>
 	<div class="col">
 		<h3>Working</h3>
@@ -113,7 +116,7 @@ Content-Type: text/html; charset=UTF-8
 
 	<div style="clear:both;"></div>
 	<h2>Licencing</h2>
-	<p>AWeather is free software licensed under the terms of the 
+	<p>AWeather is free software licensed under the terms of the
 	   <a href="http://www.gnu.org/licenses/gpl.html">GNU GPL</a>.
 	   As such, it can be used by any individuals or organizations
 	   without any license fees or royalties.</p>
@@ -138,7 +141,7 @@ Content-Type: text/html; charset=UTF-8
 				    and <a href="<%= GW_RSL %>">git</a></li>
 			</ul>
 			<b>Update:</b> AWeather 0.5 is also compatible with the
-			newly released RSL v1.41</li>
+			newly released RSL v1.41
 		</dd>
 
 		<dt>2011-06-13</dt>
@@ -252,7 +255,7 @@ Content-Type: text/html; charset=UTF-8
 		Development code is available from Git
 		(and gitweb:
 		 <a href="<%= GW_AWEATHER %>">AWeather</a>,
-		 <a href="<%= GW_GRITS    %>">Grits</a>, 
+		 <a href="<%= GW_GRITS    %>">Grits</a>,
 		 <a href="<%= GW_RSL      %>">RSL</a>)
 	</p>
 	<div style="margin-left: 30px;">
@@ -411,4 +414,21 @@ Content-Type: text/html; charset=UTF-8
 	<p>This page does not exist!
 	<p>If Andy screwed up, feel free to <a href="contact">tell him</a>,
 	   otherwise, go away</p>
+<% } %>
+
+<% void print_sitemap(const page_t **pages) { %>
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+			    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+	<% for (int i = 0; pages[i];         i++) { %>
+	<% for (int j = 0; pages[i][j].link; j++) { %>
+	<% if  (pages[i][j].prio >= 0) { %>
+	<url>
+		<loc><%% "%s%s", PREFIX, pages[i][j].link %></loc>
+		<priority><%% "%3.1f", pages[i][j].prio %></priority>
+	</url>
+	<% } } } %>
+</urlset>
 <% } %>

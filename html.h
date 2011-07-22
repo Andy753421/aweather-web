@@ -24,11 +24,16 @@
 #define RSL_WEB      "http://trmm-fc.gsfc.nasa.gov/trmm_gv/software/rsl/"
 #define RSL_FTP      "ftp://trmm-fc.gsfc.nasa.gov/software/rsl-v1.41.tar.gz"
 
+#define PREFIX       "http://lug.rose-hulman.edu/proj/aweather/"
+
 /* Types */
 typedef struct {
 	const char *link;
 	const char *name;
 	void (*print)(void);
+	float prio;
+	/* Optional */
+	const char *desc;
 } page_t;
 
 /* Data */
@@ -55,3 +60,4 @@ void print_legal(void);
 
 void print_index(void);
 void print_notfound(void);
+void print_sitemap(const page_t **pages);
