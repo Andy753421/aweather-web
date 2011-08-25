@@ -48,6 +48,7 @@ ul {
 }
 span.code {
 	font-family: monospace;
+	font-size: larger;
 }
 div.code {
 	font-family: monospace;
@@ -57,6 +58,7 @@ div.code {
 	margin-bottom: 5px;
 	color: white;
 	font-weight: bold;
+	font-size: larger;
 }
 
 dt {
@@ -221,6 +223,7 @@ body {
 	font-size: 11pt;
 	text-decoration: none;
 	padding: 8px 25px 8px 25px;
+	margin-bottom: 10px;
 	background-image: url("../images/dl-bg.png");
 	border-radius: 10px;
 	-moz-border-radius: 10px;

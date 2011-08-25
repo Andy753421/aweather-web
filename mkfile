@@ -13,5 +13,16 @@ index.cgi: index.o html.o
 %.c: %.ct
 	$CT -o $target $prereq 
 
-clean:
+clean:V:
 	rm -f *.o *.cgi html.c
+
+push:V:
+	user=spenceal
+	dest=/home/lug/htdocs/proj/aweather/
+	rsync -uavz .htaccess \
+		$user@lug.rose-hulman.edu:$dest
+	rsync -uavz --delete \
+		--exclude '*~' \
+		--exclude '.*' \
+		index.cgi images screens data \
+		$user@lug.rose-hulman.edu:$dest

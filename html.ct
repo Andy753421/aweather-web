@@ -125,6 +125,16 @@ Content-Type: text/html; charset=UTF-8
 <% void print_news(void) { %>
 	<p class="quote">Now that it's spring again, progress on AWeather is continuing.</p>
 	<dl class="news">
+		<dt>2011-08-25</dt>
+		<dd>
+			AWeather 0.5.1 released: <ul>
+				<li>Bugfix release</li>
+				<li>Updated sat/map/elev to provide better data</li>
+				<li>First release with <a href="<%= DEB_HOME %>">Debian packages</a></li>
+				<li>Ubuntu packaging in progress (hopefully for 11.10)</li>
+			</ul>
+		</dd>
+
 		<dt>2011-06-19</dt>
 		<dd>
 			AWeather 0.5 released: <ul>
@@ -224,15 +234,18 @@ Content-Type: text/html; charset=UTF-8
 			</dd>
 
 			<dt>Gentoo</dt>
-			<dd>Emerge <span class="code">sci-geosciences/aweather</span> from the sunrise overlay</dd>
+			<dd><span class="code">emerge sci-geosciences/aweather</span> from the sunrise overlay</dd>
 
 			<dt>Debian</dt>
-			<dd><a href="debian/<%= VERSION_DEBIAN %>/">.deb files</a>, further packaging in progress</dd>
+			<dd><span class="code">apt-get install aweather</span> from Debian sid</dd>
+
+			<dt>Ubuntu</dt>
+			<dd>Packaging in progress for Ubuntu 11.10</dd>
 		</dl></li>
 		<li class="windows"><dl class="inline">
 			<dt>Windows</dt>
 			<dd><a href="files/aweather-<%= VERSION_WIN32 %>-gtk.exe">aweather-<%= VERSION_WIN32 %>-gtk.exe</a>
-				(Use this if you know what you're doing)</dd>
+				(Use this unless you know what you're doing)</dd>
 
 			<dt>Without GTK</dt>
 			<dd><a href="files/aweather-<%= VERSION_WIN32 %>.exe">aweather-<%= VERSION_WIN32 %>.exe</a></dd>
@@ -352,7 +365,7 @@ Content-Type: text/html; charset=UTF-8
 		<h3>NASA/TRMM version</h3>
 		<ul>
 			<li><a href="<%= RSL_WEB %>">TRMM RSL Website</a></li>
-			<li><a href="<%= RSL_FTP %>">rsl-v1.41.tar.gz</a></li>
+			<li><a href="<%= RSL_FTP RSL_TAR %>"><%= RSL_TAR %></a></li>
 		</ul>
 	</div>
 	<div class="col">
@@ -406,6 +419,7 @@ Content-Type: text/html; charset=UTF-8
 		<span>AWeather <%= VERSION %></span>
 		<img src="images/dl-arrow.png" alt="Download" />
 	</a>
+	<p style="text-align: center;"><%= VERSION_DESC %></p>
 <% } %>
 
 <% void print_notfound(void) { %>

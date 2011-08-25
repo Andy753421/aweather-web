@@ -1,10 +1,13 @@
 /* Version information */
-#define VERSION        "0.5"
-#define VERSION_LINUX  VERSION
-#define VERSION_GENTOO VERSION
-#define VERSION_DEBIAN VERSION
-#define VERSION_WIN32  VERSION
+#define VERSION        "0.5.1"
+#define VERSION_LINUX  "0.5.1"
+#define VERSION_GENTOO "0.5.1"
+#define VERSION_DEBIAN "0.5.1"
+#define VERSION_UBUNTU "0"
+#define VERSION_WIN32  "0.5.1"
 #define VERSION_MACOS  "0"
+
+#define VERSION_DESC   "Version " VERSION " contains several bug fixes along with updated WMS overlays"
 
 /* Link info */
 #define WIKI_INDEX   "/code/projects/aweather/wiki"
@@ -21,8 +24,11 @@
 #define GW_GRITS     "/git/?p=proj/grits"
 #define GW_RSL       "/git/?p=~spenceal/rsl"
 
+#define RSL_TAR      "rsl-v1.42.tar.gz"
 #define RSL_WEB      "http://trmm-fc.gsfc.nasa.gov/trmm_gv/software/rsl/"
-#define RSL_FTP      "ftp://trmm-fc.gsfc.nasa.gov/software/rsl-v1.41.tar.gz"
+#define RSL_FTP      "ftp://trmm-fc.gsfc.nasa.gov/software/"
+
+#define DEB_HOME     "http://packages.debian.org/unstable/aweather"
 
 #define PREFIX       "http://lug.rose-hulman.edu/proj/aweather/"
 
