@@ -130,8 +130,8 @@ Content-Type: text/html; charset=UTF-8
 			AWeather 0.5.1 released: <ul>
 				<li>Bugfix release</li>
 				<li>Updated sat/map/elev to provide better data</li>
-				<li>First release with <a href="<%= DEB_HOME %>">Debian packages</a></li>
-				<li>Ubuntu packaging in progress (hopefully for 11.10)</li>
+				<li>First release with <a href="<%= DEBIAN_HOME %>">Debian</a>, 
+				                   and <a href="<%= UBUNTU_HOME %>">Ubuntu</a> packages</li>
 			</ul>
 		</dd>
 
@@ -240,7 +240,7 @@ Content-Type: text/html; charset=UTF-8
 			<dd><span class="code">apt-get install aweather</span> from Debian sid</dd>
 
 			<dt>Ubuntu</dt>
-			<dd>Packaging in progress for Ubuntu 11.10</dd>
+			<dd><span class="code">apt-get install aweather</span> from Ubuntu oneiric</dd>
 		</dl></li>
 		<li class="windows"><dl class="inline">
 			<dt>Windows</dt>

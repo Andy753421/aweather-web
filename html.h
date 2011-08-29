@@ -28,7 +28,8 @@
 #define RSL_WEB      "http://trmm-fc.gsfc.nasa.gov/trmm_gv/software/rsl/"
 #define RSL_FTP      "ftp://trmm-fc.gsfc.nasa.gov/software/"
 
-#define DEB_HOME     "http://packages.debian.org/unstable/aweather"
+#define DEBIAN_HOME  "http://packages.debian.org/unstable/aweather"
+#define UBUNTU_HOME  "http://packages.ubuntu.com/oneiric/science/aweather"
 
 #define PREFIX       "http://lug.rose-hulman.edu/proj/aweather/"
 
