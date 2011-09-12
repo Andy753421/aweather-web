@@ -1,13 +1,8 @@
 /* Version information */
-#define VERSION        "0.5.1"
-#define VERSION_LINUX  "0.5.1"
-#define VERSION_GENTOO "0.5.1"
-#define VERSION_DEBIAN "0.5.1"
-#define VERSION_UBUNTU "0"
+#define VERSION        "0.5.2"
 #define VERSION_WIN32  "0.5.1"
-#define VERSION_MACOS  "0"
 
-#define VERSION_DESC   "Version " VERSION " contains several bug fixes along with updated WMS overlays"
+#define VERSION_DESC   "Version " VERSION " contains additional bug fixes and new desktop icons"
 
 /* Link info */
 #define WIKI_INDEX   "/code/projects/aweather/wiki"

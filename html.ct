@@ -125,6 +125,14 @@ Content-Type: text/html; charset=UTF-8
 <% void print_news(void) { %>
 	<p class="quote">Now that it's spring again, progress on AWeather is continuing.</p>
 	<dl class="news">
+		<dt>2011-09-12</dt>
+		<dd>
+			AWeather 0.5.2 released: <ul>
+				<li>Added new desktop icons</li>
+				<li>Miscellaneous bug fixes</li>
+			</ul>
+		</dd>
+
 		<dt>2011-08-25</dt>
 		<dd>
 			AWeather 0.5.1 released: <ul>
