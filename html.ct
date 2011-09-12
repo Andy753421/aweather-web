@@ -123,7 +123,8 @@ Content-Type: text/html; charset=UTF-8
 <% } %>
 
 <% void print_news(void) { %>
-	<p class="quote">Now that it's spring again, progress on AWeather is continuing.</p>
+	<!-- It's not really spring anymore :/ -->
+	<!-- <p class="quote">Now that it's spring again, progress on AWeather is continuing.</p> -->
 	<dl class="news">
 		<dt>2011-09-12</dt>
 		<dd>
@@ -248,7 +249,12 @@ Content-Type: text/html; charset=UTF-8
 			<dd><span class="code">apt-get install aweather</span> from Debian sid</dd>
 
 			<dt>Ubuntu</dt>
-			<dd><span class="code">apt-get install aweather</span> from Ubuntu oneiric</dd>
+			<dd><span class="code">apt-get install aweather</span> from Ubuntu Oneiric</dd>
+			<!--
+				(Arch packages still have bugs)
+				<dt>Arch</dt>
+				<dd>Available from the AUR</dd>
+			-->
 		</dl></li>
 		<li class="windows"><dl class="inline">
 			<dt>Windows</dt>
