@@ -1,6 +1,6 @@
 /* Version information */
 #define VERSION        "0.5.2"
-#define VERSION_WIN32  "0.5.1"
+#define VERSION_WIN32  "0.5.2"
 
 #define VERSION_DESC   "Version " VERSION " contains additional bug fixes and new desktop icons"
 
