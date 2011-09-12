@@ -26,6 +26,7 @@ page_t footer[] = {
 };
 page_t special[] = {
 	{"",            NULL,          print_index,        1.0, desc},
+	{"oldnews",     "Old News",    print_oldnews,      0.2, NULL},
 	{NULL,          "Not found",   print_notfound,    -1.0, NULL},
 	{NULL,          NULL,          NULL,               0.0, NULL},
 };

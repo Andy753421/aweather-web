@@ -132,6 +132,7 @@ Content-Type: text/html; charset=UTF-8
 				<li>Added new desktop icons</li>
 				<li>Miscellaneous bug fixes</li>
 			</ul>
+			Improved organization of the <a href="<%= WIKI_INDEX %>">Wiki</a>
 		</dd>
 
 		<dt>2011-08-25</dt>
@@ -169,7 +170,14 @@ Content-Type: text/html; charset=UTF-8
 			<li>Added an option to automatically refresh after a timeout</li>
 			<li>New fullscreen mode</li>
 		</ul></dd>
+	</dl>
+	<p class="note">See also: <a href="oldnews">Older news</a>,
+		                  <a href="<%= GW_AWEATHER %>">gitweb</a></p>
+<% } %>
 
+<% void print_oldnews(void) { %>
+	&lt; <a href="news">News</a>
+	<dl class="news">
 		<dt>2010-05-17</dt>
 		<dd>AWeather 0.4.1:<ul>
 			<li>Win32 fixes and improved debug support</li>
@@ -197,7 +205,6 @@ Content-Type: text/html; charset=UTF-8
 		    progress is being made on libgis, which is now able to display
 		    a virtual globe using data from NASA servers.</dd>
 	</dl>
-	<p class="note">See also: AWeather's <a href="<%= GW_AWEATHER %>">gitweb</a></p>
 <% } %>
 
 <% void print_screenshots(void) { %>

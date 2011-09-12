@@ -52,6 +52,7 @@ void print_page(const page_t *which);
 /* Pages */
 void print_about(void);
 void print_news(void);
+void print_oldnews(void);
 void print_screenshots(void);
 void print_download(void);
 void print_development(void);
