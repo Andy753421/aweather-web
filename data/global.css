@@ -76,7 +76,6 @@ dd {
 
 /* Layout */
 body {
-	background: fixed;
 	background-image: url('../images/main-bg.png');
 	background-repeat: repeat-x;
 	background-color: white;
