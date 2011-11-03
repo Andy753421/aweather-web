@@ -7,8 +7,8 @@ PKG_LIBS=`{pkg-config --libs glib-2.0}
 index.cgi: index.o html.o
 	gcc $CFLAGS -o $target $prereq $PKG_LIBS
 
-%.o: %.c
-	gcc $CFLAGS $PKG_FLAGS -c -o $target $prereq
+%.o: %.c html.h
+	gcc $CFLAGS $PKG_FLAGS -c -o $target $stem.c
 
 %.c: %.ct
 	$CT -o $target $prereq 

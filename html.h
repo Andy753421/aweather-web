@@ -1,8 +1,10 @@
 /* Version information */
-#define VERSION        "0.5.2"
-#define VERSION_WIN32  "0.5.2"
+#define VERSION        "0.6"
+#define VERSION_WIN32  "0.6"
 
-#define VERSION_DESC   "Version " VERSION " contains additional bug fixes and new desktop icons"
+#define VERSION_DESC   "Version " VERSION " adds a new \"Alert\" plugin for "    \
+		       "displaying Warnings, Watches, and Advisories issued by " \
+		       "the National Weather Services"
 
 /* Link info */
 #define WIKI_INDEX   "/code/projects/aweather/wiki"

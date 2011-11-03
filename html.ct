@@ -88,6 +88,8 @@ Content-Type: text/html; charset=UTF-8
 				<li>Level-II archives</li>
 				<li>Conus NEXRAD imagery</li>
 				<li>Volume display of dBZ iso surfaces</li>
+				<li>Storm based and county based<br/>
+				    warning/watch/advisory displays</li>
 			</ul></li>
 			<li>Virtual Globe base rendering<ul>
 				<li>Including terrain, satellite, and map imagery</li>
@@ -126,6 +128,20 @@ Content-Type: text/html; charset=UTF-8
 	<!-- It's not really spring anymore :/ -->
 	<!-- <p class="quote">Now that it's spring again, progress on AWeather is continuing.</p> -->
 	<dl class="news">
+		<dt>2011-11-03</dt>
+		<dd>
+			AWeather 0.6 released: <ul>
+				<li>Added "Alerts" plugin using the 
+				    <a href="http://alerts.weather.gov/">NWS CAP</a> feed</li>
+				<li>Updated GTK+ libraries for Windows</li>
+				<li>Behind the scenes, mouse support in Grits
+				    has been much improved</li>
+			</ul>
+			This release was a little bit faster than previous releases.
+			Hopefully additional improvements to the alerts plugin
+			can be made incrementally during the 0.x.x releases.
+		</dd>
+
 		<dt>2011-09-12</dt>
 		<dd>
 			AWeather 0.5.2 released: <ul>
@@ -230,6 +246,10 @@ Content-Type: text/html; charset=UTF-8
 		<li>
 			<% print_screen("iso"); %>
 			Close up showing a 52.5 dBZ isosurface
+		</li>
+		<li>
+			<% print_screen("alert"); %>
+			Current severe weather alerts for the CONUS
 		</li>
 	</ul>
 <% } %>
@@ -429,6 +449,7 @@ Content-Type: text/html; charset=UTF-8
 			<li>Data caching</li>
 			<li>Automatic updating</li>
 		</ul></li>
+		<li>Warning/Watch/Advisory display</li>
 		<li>Surface and map overlays</li>
 		<li>Terrain rendering</li>
 	</ul>
