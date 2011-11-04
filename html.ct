@@ -77,6 +77,9 @@ Content-Type: text/html; charset=UTF-8
 		At the same time, it strives to be simpler and easier to use
 		than existing meteorological software packages such as GEMPAK
 		and IDV.
+
+		Currently AWeather only displays data provided by the United
+		States National Weather Service.
 	</p>
 	<hr />
 
