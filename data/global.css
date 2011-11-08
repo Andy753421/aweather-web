@@ -1,4 +1,4 @@
-/* Clearn defaults */
+/* Clear defaults */
 * {
 	margin: 0;
 	padding: 0;
@@ -251,7 +251,7 @@ body {
 	margin-right: 25px;
 }
 
-/* Screnshots */
+/* Screenshots */
 .gallery {
 	padding: 0px; /* override ul */
 	margin: 20px;

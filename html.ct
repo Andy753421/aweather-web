@@ -457,7 +457,11 @@ Content-Type: text/html; charset=UTF-8
 		<li>Terrain rendering</li>
 	</ul>
 	<div style="float: left; margin-left: 20px;">
-		<% print_screen("meso"); %>
+		<% print_screen("stormbased"); %>
+		<div style="text-align: center; margin-right: 25px;">
+			AWeather showing storm based warnings<br />
+			on top of Level-II radar imagery
+		</div>
 	</div>
 	<a href="download" class="download" style="float: right;">
 		<span>Download</span>
