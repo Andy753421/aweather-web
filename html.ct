@@ -279,7 +279,8 @@ Content-Type: text/html; charset=UTF-8
 			<dd><span class="code">apt-get install aweather</span> from Debian sid</dd>
 
 			<dt>Ubuntu</dt>
-			<dd><span class="code">apt-get install aweather</span> from Ubuntu Oneiric</dd>
+			<dd><span class="code">apt-get install aweather</span> from Ubuntu Oneiric,
+			    or the <a href="<%= UBUNTU_PPA %>">AWeather PPA</a></dd>
 			<!--
 				(Arch packages still have bugs)
 				<dt>Arch</dt>

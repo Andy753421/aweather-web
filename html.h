@@ -27,6 +27,7 @@
 
 #define DEBIAN_HOME  "http://packages.debian.org/unstable/aweather"
 #define UBUNTU_HOME  "http://packages.ubuntu.com/oneiric/science/aweather"
+#define UBUNTU_PPA   "https://launchpad.net/~andy753421/+archive/aweather"
 #define ARCH_HOME    "http://aur.archlinux.org/packages.php?ID=52003"
 
 #define PREFIX       "http://lug.rose-hulman.edu/proj/aweather/"
