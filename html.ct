@@ -131,6 +131,14 @@ Content-Type: text/html; charset=UTF-8
 	<!-- It's not really spring anymore :/ -->
 	<!-- <p class="quote">Now that it's spring again, progress on AWeather is continuing.</p> -->
 	<dl class="news">
+		<dt>2011-11-25</dt>
+		<dd>
+			AWeather 0.6.1 released: <ul>
+				<li>Added a Radar menu to quickly jump to a NEXRAD/WSR-88D site</li>
+				<li>Fixed a bunch of 64-bit bugs</li>
+			</ul>
+		</dd>
+
 		<dt>2011-11-03</dt>
 		<dd>
 			AWeather 0.6 released: <ul>

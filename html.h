@@ -1,10 +1,9 @@
 /* Version information */
-#define VERSION        "0.6"
-#define VERSION_WIN32  "0.6"
+#define VERSION        "0.6.1"
+#define VERSION_WIN32  "0.6.1"
 
-#define VERSION_DESC   "Version " VERSION " adds a new \"Alert\" plugin for "    \
-		       "displaying Warnings, Watches, and Advisories issued by " \
-		       "the National Weather Services"
+#define VERSION_DESC   "Version " VERSION " adds a Radar menu for quickly " \
+		       "jumping to a NEXRAD site and also fixes some bugs"
 
 /* Link info */
 #define WIKI_INDEX   "/code/projects/aweather/wiki"
