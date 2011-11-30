@@ -276,7 +276,7 @@ Content-Type: text/html; charset=UTF-8
 			<dt>Source code</dt>
 			<dd>
 			<a href="files/aweather-<%= VERSION %>.tar.gz">aweather-<%= VERSION %>.tar.gz</a>,
-			<a href="../grits/grits-<%= VERSION %>.tar.gz">grits-<%= VERSION %>.tar.gz</a>,
+			<a href="../grits/grits-<%= VERSION_GRITS %>.tar.gz">grits-<%= VERSION_GRITS %>.tar.gz</a>,
 			<a href="files/rsl-1.40.tar.gz">rsl-1.40.tar.gz</a>
 			</dd>
 

@@ -1,5 +1,6 @@
 /* Version information */
 #define VERSION        "0.6.1"
+#define VERSION_GRITS  "0.6.2"
 #define VERSION_WIN32  "0.6.1"
 
 #define VERSION_DESC   "Version " VERSION " adds a Radar menu for quickly " \
