@@ -1,9 +1,6 @@
 CT=/scratch/ct/ct
 CFLAGS='--std=c99 -Wall'
 
-PKG_FLAGS=`{pkg-config --cflags glib-2.0}
-PKG_LIBS=`{pkg-config --libs glib-2.0}
-
 index.cgi: index.o html.o
 	gcc $CFLAGS -o $target $prereq $PKG_LIBS
 

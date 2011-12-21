@@ -1,4 +1,5 @@
-#include <glib.h>
+#include <stdlib.h>
+#include <string.h>
 #include "html.h"
 
 const char desc[] =
@@ -39,7 +40,7 @@ int main(int argc, char **argv)
 {
 	print_header();
 
-	const gchar *name = g_getenv("PATH_INFO");
+	const char *name = getenv("PATH_INFO");
 	if (name == NULL || name[0] == '\0' || name[1] == '\0')
 		return print_page(index), 0;
 
@@ -47,12 +48,12 @@ int main(int argc, char **argv)
 	for (int i = 0; everything[i];         i++)
 	for (int j = 0; everything[i][j].link; j++) {
 		const page_t *page = &everything[i][j];
-		if (g_str_equal(name+1, page->link))
+		if (!strcmp(name+1, page->link))
 			return print_page(page), 0;
 	}
 
 	/* Print sitemap by itself */
-	if (g_str_equal(name+1, "sitemap.xml"))
+	if (!strcmp(name+1, "sitemap.xml"))
 		return print_sitemap(everything), 0;
 
 	/* 404 */
