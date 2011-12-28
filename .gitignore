@@ -3,4 +3,5 @@
 *.cgi
 *.swp
 html.c
+manual.inc
 tags

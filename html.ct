@@ -127,6 +127,12 @@ Content-Type: text/html; charset=UTF-8
 	   without any license fees or royalties.</p>
 <% } %>
 
+<% void print_manual(void) { %>
+	<div class="asciidoc">
+		<% print_file("manual.inc"); %>
+	</div>
+<% } %>
+
 <% void print_news(void) { %>
 	<!-- It's not really spring anymore :/ -->
 	<!-- <p class="quote">Now that it's spring again, progress on AWeather is continuing.</p> -->

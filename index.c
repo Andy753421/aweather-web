@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "html.h"
@@ -10,6 +11,7 @@ const char desc[] =
 /* Page data */
 page_t header[] = {
 	{"about",       "About",       print_about,        0.7, NULL},
+	{"manual",      "Manual",      print_manual,       0.5, NULL},
 	{"news",        "News",        print_news,         0.3, NULL},
 	{"screenshots", "Screenshots", print_screenshots,  0.5, NULL},
 	{"download",    "Download",    print_download,     0.7, NULL},
@@ -34,6 +36,17 @@ page_t special[] = {
 const page_t *everything[] = {header, other, footer, special, NULL};
 const page_t *index        = &special[0];
 const page_t *notfound     = &special[2];
+
+/* Helper functions */
+void print_file(char *file)
+{
+	char data[512];
+	FILE *fd = fopen(file, "r");
+	while (!feof(fd)) {
+		size_t size = fread(data, 1, sizeof(data), fd);
+		fwrite(data, 1, size, stdout);
+	}
+}
 
 /* Main */
 int main(int argc, char **argv)

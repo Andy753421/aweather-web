@@ -49,11 +49,13 @@ extern page_t footer[];
 extern page_t special[];
 
 /* Global functions */
+void print_file(char *file);
 void print_header(void);
 void print_page(const page_t *which);
 
 /* Pages */
 void print_about(void);
+void print_manual(void);
 void print_news(void);
 void print_oldnews(void);
 void print_screenshots(void);

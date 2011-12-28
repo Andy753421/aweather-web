@@ -339,3 +339,15 @@ dl.inline dt:after {
 dl.small dt {
 	width: 4em;
 }
+
+/* Asciidoc */
+.asciidoc p {
+	margin-top: 0.7em;
+}
+.asciidoc li p,
+.asciidoc td p {
+	margin-top: 0em;
+}
+.asciidoc .hdlist table {
+	padding-left: 1em;
+}
