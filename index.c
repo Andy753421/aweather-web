@@ -33,7 +33,7 @@ page_t special[] = {
 };
 const page_t *everything[] = {header, other, footer, special, NULL};
 const page_t *index        = &special[0];
-const page_t *notfound     = &special[1];
+const page_t *notfound     = &special[2];
 
 /* Main */
 int main(int argc, char **argv)
