@@ -1,10 +1,11 @@
 /* Version information */
-#define VERSION        "0.6.1"
-#define VERSION_GRITS  "0.6.2"
-#define VERSION_WIN32  "0.6.1"
+#define VERSION        "0.6.3"
+#define VERSION_GRITS  "0.6.3"
+#define VERSION_WIN    "0.6.3"
+#define VERSION_MAC    "0.6.3"
 
-#define VERSION_DESC   "Version " VERSION " adds a Radar menu for quickly " \
-		       "jumping to a NEXRAD site and also fixes some bugs"
+#define VERSION_DESC   "Version " VERSION " adds support for Mac OS X and " \
+		       "provides an improved <a href=\"manual\">User Guide</a>"
 
 /* Link info */
 #define WIKI_INDEX   "/code/projects/aweather/wiki"

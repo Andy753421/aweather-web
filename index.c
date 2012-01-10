@@ -11,8 +11,8 @@ const char desc[] =
 /* Page data */
 page_t header[] = {
 	{"about",       "About",       print_about,        0.7, NULL},
-	{"manual",      "Manual",      print_manual,       0.5, NULL},
 	{"news",        "News",        print_news,         0.3, NULL},
+	{"manual",      "Manual",      print_manual,       0.5, NULL},
 	{"screenshots", "Screenshots", print_screenshots,  0.5, NULL},
 	{"download",    "Download",    print_download,     0.7, NULL},
 	{"development", "Development", print_development,  0.3, NULL},

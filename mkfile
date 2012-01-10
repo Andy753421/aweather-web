@@ -12,7 +12,7 @@ index.cgi: index.o html.o
 %.c: %.ct
 	$CT -o $target $prereq 
 
-manual.inc: ../docs/manual.ad
+manual.inc: ../docs/userguide.ad
 	asciidoc -s -a toc -a numbered -b xhtml11 -o- $prereq \
 	| awk -f toc.awk > $target
 

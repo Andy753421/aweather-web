@@ -127,16 +127,23 @@ Content-Type: text/html; charset=UTF-8
 	   without any license fees or royalties.</p>
 <% } %>
 
-<% void print_manual(void) { %>
-	<div class="asciidoc">
-		<% print_file("manual.inc"); %>
-	</div>
-<% } %>
-
 <% void print_news(void) { %>
 	<!-- It's not really spring anymore :/ -->
 	<!-- <p class="quote">Now that it's spring again, progress on AWeather is continuing.</p> -->
 	<dl class="news">
+		<dt>2012-01-10</dt>
+		<dd>
+			AWeather 0.6.3 released: <ul>
+				<li>Added support for Mac OS X</li>
+				<li>Added an much improved <a href="manual">User Guide</a>,
+				    written by Jason Holmes</li>
+				<li>Miscellaneous bug fixes</li>
+			</ul>
+			<span style="font-size: smaller; font-style: italic;">
+				(p.s. AWeather 0.6.2 doesn't exist, you never
+				heard of it, and neither have I)</small>
+		</dd>
+
 		<dt>2011-11-25</dt>
 		<dd>
 			AWeather 0.6.1 released: <ul>
@@ -177,7 +184,14 @@ Content-Type: text/html; charset=UTF-8
 				                   and <a href="<%= UBUNTU_HOME %>">Ubuntu</a> packages</li>
 			</ul>
 		</dd>
+	</dl>
+	<p class="note">See also: <a href="oldnews">Older news</a>,
+		                  <a href="<%= GW_AWEATHER %>">gitweb</a></p>
+<% } %>
 
+<% void print_oldnews(void) { %>
+	&lt; <a href="news">News</a>
+	<dl class="news">
 		<dt>2011-06-19</dt>
 		<dd>
 			AWeather 0.5 released: <ul>
@@ -203,14 +217,7 @@ Content-Type: text/html; charset=UTF-8
 			<li>Added an option to automatically refresh after a timeout</li>
 			<li>New fullscreen mode</li>
 		</ul></dd>
-	</dl>
-	<p class="note">See also: <a href="oldnews">Older news</a>,
-		                  <a href="<%= GW_AWEATHER %>">gitweb</a></p>
-<% } %>
 
-<% void print_oldnews(void) { %>
-	&lt; <a href="news">News</a>
-	<dl class="news">
 		<dt>2010-05-17</dt>
 		<dd>AWeather 0.4.1:<ul>
 			<li>Win32 fixes and improved debug support</li>
@@ -238,6 +245,12 @@ Content-Type: text/html; charset=UTF-8
 		    progress is being made on libgis, which is now able to display
 		    a virtual globe using data from NASA servers.</dd>
 	</dl>
+<% } %>
+
+<% void print_manual(void) { %>
+	<div class="asciidoc">
+		<% print_file("manual.inc"); %>
+	</div>
 <% } %>
 
 <% void print_screenshots(void) { %>
@@ -300,18 +313,26 @@ Content-Type: text/html; charset=UTF-8
 				<dt>Arch</dt>
 				<dd>Available from the AUR</dd>
 			-->
+			<!--
+				<dt>Slackware</dt>
+				<dd>Available in Slacky 13.37</dd>
+			-->
+			<!--
+				<dt>Mandriva</dt>
+				<dd>Available from contrib/cooker?</dd>
+			-->
 		</dl></li>
 		<li class="windows"><dl class="inline">
 			<dt>Windows</dt>
-			<dd><a href="files/aweather-<%= VERSION_WIN32 %>-gtk.exe">aweather-<%= VERSION_WIN32 %>-gtk.exe</a>
+			<dd><a href="files/aweather-<%= VERSION_WIN %>-gtk.exe">aweather-<%= VERSION_WIN %>-gtk.exe</a>
 				(Use this unless you know what you're doing)</dd>
 
 			<dt>Without GTK</dt>
-			<dd><a href="files/aweather-<%= VERSION_WIN32 %>.exe">aweather-<%= VERSION_WIN32 %>.exe</a></dd>
+			<dd><a href="files/aweather-<%= VERSION_WIN %>.exe">aweather-<%= VERSION_WIN %>.exe</a></dd>
 		</dl></li>
 		<li class="macos" style="padding-top: .8em; padding-bottom: .8em"><dl class="inline">
 			<dt>Mac OS X</dt>
-			<dd>Coming soon (Mac OS developer? <a href="/code/issues/1">Help out</a>)</dd>
+			<dd><a href="files/aweather-<%= VERSION_MAC %>.dmg">aweather-<%= VERSION_MAC %>.dmg</a></dd>
 		</dl></li>
 	</ul>
 
@@ -319,7 +340,7 @@ Content-Type: text/html; charset=UTF-8
 	<p class="note">Pre-releases, betas, and other hazardous software</p>
 	<div style="margin-left: 30px;">
 		<p>Check out the <a href="files">files</a> directory for any potential updates</p>
-		<p>Pre-releases are labeled with a -p0 and are mainly built for testing the Windows packages</p>
+		<p>Pre-releases are labeled with a -p0 and are mainly built for testing the Windows and Mac packages</p>
 	</div>
 
 	<h2>Development code</h2>
