@@ -1,37 +1,37 @@
 /* Version information */
-#define VERSION        "0.7"
-#define VERSION_GRITS  "0.7"
-#define VERSION_WIN    "0.7"
-#define VERSION_MAC    "0.7"
+#define VERSION       "0.7"
+#define VERSION_GRITS "0.7"
+#define VERSION_WIN   "0.7"
+#define VERSION_MAC   "0.7"
 
-#define VERSION_DESC   "Version " VERSION " a GPS tracking plugin for Linux " \
-                       "along with various other updates and bug fixes"
+#define VERSION_DESC  "Version " VERSION " a GPS tracking plugin for Linux " \
+                      "along with various other updates and bug fixes"
 
 /* Link info */
-#define WIKI_INDEX   "/code/projects/aweather/wiki"
-#define WIKI_INSTALL "/code/projects/aweather/wiki/Install"
+#define WIKI_INDEX    "/code/projects/aweather/wiki"
+#define WIKI_INSTALL  "/code/projects/aweather/wiki/Install"
 
-#define BUG_LIST     "/code/projects/aweather/issues"
-#define BUG_NEW      "/code/projects/aweather/issues/new"
+#define BUG_LIST      "/code/projects/aweather/issues"
+#define BUG_NEW       "/code/projects/aweather/issues/new"
 
-#define GIT_AWEATHER "git://lug.rose-hulman.edu/proj/aweather"
-#define GIT_GRITS    "git://lug.rose-hulman.edu/proj/grits"
-#define GIT_RSL      "git://lug.rose-hulman.edu/~spenceal/rsl"
+#define GIT_AWEATHER  "git://lug.rose-hulman.edu/proj/aweather"
+#define GIT_GRITS     "git://lug.rose-hulman.edu/proj/grits"
+#define GIT_RSL       "git://lug.rose-hulman.edu/~spenceal/rsl"
 
-#define GW_AWEATHER  "/git/?p=proj/aweather"
-#define GW_GRITS     "/git/?p=proj/grits"
-#define GW_RSL       "/git/?p=~spenceal/rsl"
+#define GW_AWEATHER   "/git/?p=proj/aweather"
+#define GW_GRITS      "/git/?p=proj/grits"
+#define GW_RSL        "/git/?p=~spenceal/rsl"
 
-#define RSL_TAR      "rsl-v1.42.tar.gz"
-#define RSL_WEB      "http://trmm-fc.gsfc.nasa.gov/trmm_gv/software/rsl/"
-#define RSL_FTP      "ftp://trmm-fc.gsfc.nasa.gov/software/"
+#define RSL_TAR       "rsl-v1.42.tar.gz"
+#define RSL_WEB       "http://trmm-fc.gsfc.nasa.gov/trmm_gv/software/rsl/"
+#define RSL_FTP       "ftp://trmm-fc.gsfc.nasa.gov/software/"
 
-#define DEBIAN_HOME  "http://packages.debian.org/unstable/aweather"
-#define UBUNTU_HOME  "http://packages.ubuntu.com/oneiric/science/aweather"
-#define UBUNTU_PPA   "https://launchpad.net/~andy753421/+archive/aweather"
-#define ARCH_HOME    "http://aur.archlinux.org/packages.php?ID=52003"
+#define DEBIAN_HOME   "http://packages.debian.org/unstable/aweather"
+#define UBUNTU_HOME   "http://packages.ubuntu.com/oneiric/science/aweather"
+#define UBUNTU_PPA    "https://launchpad.net/~andy753421/+archive/aweather"
+#define ARCH_HOME     "http://aur.archlinux.org/packages.php?ID=52003"
 
-#define PREFIX       "http://lug.rose-hulman.edu/proj/aweather/"
+#define PREFIX        "http://lug.rose-hulman.edu/proj/aweather/"
 
 /* Types */
 typedef struct {
