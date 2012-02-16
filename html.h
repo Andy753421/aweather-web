@@ -1,11 +1,11 @@
 /* Version information */
-#define VERSION        "0.6.3"
-#define VERSION_GRITS  "0.6.3"
-#define VERSION_WIN    "0.6.3"
-#define VERSION_MAC    "0.6.3"
+#define VERSION        "0.7"
+#define VERSION_GRITS  "0.7"
+#define VERSION_WIN    "0.7"
+#define VERSION_MAC    "0.7"
 
-#define VERSION_DESC   "Version " VERSION " adds support for Mac OS X and " \
-		       "provides an improved <a href=\"manual\">User Guide</a>"
+#define VERSION_DESC   "Version " VERSION " a GPS tracking plugin for Linux " \
+                       "along with various other updates and bug fixes"
 
 /* Link info */
 #define WIKI_INDEX   "/code/projects/aweather/wiki"

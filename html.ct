@@ -131,6 +131,23 @@ Content-Type: text/html; charset=UTF-8
 	<!-- It's not really spring anymore :/ -->
 	<!-- <p class="quote">Now that it's spring again, progress on AWeather is continuing.</p> -->
 	<dl class="news">
+		<dt>2012-02-16</dt>
+		<dd>
+			AWeather 0.7 released: <ul>
+				<li>Added a GPS plugin that using
+				    <a href="http://www.catb.org/gpsd/">GPSd</a><ul>
+				    <li>Written by Adam Boggs and based on the
+				        <a href="http://www.aircrafter.org/boggs/stormchasing/BrainStorm/">BrainStorm</a>
+				        storm chasing tool</li>
+				    <li>Linux only, or maybe Mac or Windows
+				        if you're very very brave</li>
+				</ul></li>
+				<li>Automaticlaly save window size and position</li>
+				<li>Add toggle buttons for county-based and storm-based alerts</li>
+				<li>Miscellaneous bug fixes, including some long-standing rendering artifacts</li>
+			</ul>
+		</dd>
+
 		<dt>2012-01-10</dt>
 		<dd>
 			AWeather 0.6.3 released: <ul>
@@ -141,7 +158,7 @@ Content-Type: text/html; charset=UTF-8
 			</ul>
 			<span style="font-size: smaller; font-style: italic;">
 				(p.s. AWeather 0.6.2 doesn't exist, you never
-				heard of it, and neither have I)</small>
+				heard of it, and neither have I)</span>
 		</dd>
 
 		<dt>2011-11-25</dt>
@@ -489,6 +506,7 @@ Content-Type: text/html; charset=UTF-8
 			<li>Automatic updating</li>
 		</ul></li>
 		<li>Warning/Watch/Advisory display</li>
+		<li>GPS tracking and logging</li>
 		<li>Surface and map overlays</li>
 		<li>Terrain rendering</li>
 	</ul>
