@@ -97,6 +97,7 @@ Content-Type: text/html; charset=UTF-8
 			<li>Virtual Globe base rendering<ul>
 				<li>Including terrain, satellite, and map imagery</li>
 			</ul></li>
+			<li>GPS tracking using GPSd (Linux only)</li>
 			<li>Real-time and offline mode</li>
 			<li>Auto-updating</li>
 			<li>Fullscreen mode</li>
