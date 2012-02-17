@@ -135,7 +135,7 @@ Content-Type: text/html; charset=UTF-8
 		<dt>2012-02-16</dt>
 		<dd>
 			AWeather 0.7 released: <ul>
-				<li>Added a GPS plugin that using
+				<li>Added a GPS plugin using
 				    <a href="http://www.catb.org/gpsd/">GPSd</a><ul>
 				    <li>Written by Adam Boggs and based on the
 				        <a href="http://www.aircrafter.org/boggs/stormchasing/BrainStorm/">BrainStorm</a>
