@@ -107,7 +107,6 @@ Content-Type: text/html; charset=UTF-8
 		<h3>Planned</h3>
 		<ul>
 			<li>Additional data sources<ul>
-				<li>Watch/warning/advisory boxes</li>
 				<li>Surface data (temp., humidity, etc)</li>
 			</ul></li>
 			<li>Derived NEXRAD data<ul>
@@ -116,6 +115,7 @@ Content-Type: text/html; charset=UTF-8
 				<li>Echo tops</li>
 			</ul></li>
 			<li>Vertical cross sections</li>
+			<li>Spotter network intergration</li>
 			<li>Animation</li>
 		</ul>
 	</div>
