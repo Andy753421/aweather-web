@@ -142,6 +142,7 @@ Content-Type: text/html; charset=UTF-8
 				    <li>Linux only, or maybe Mac or Windows
 				        if you're very very brave</li>
 				</ul></li>
+				<li>Detailed (but opaque) maps in the map plugin</li>
 				<li>Automaticlaly save window size and position</li>
 				<li>Add toggle buttons for county-based and storm-based alerts</li>
 				<li>Miscellaneous bug fixes, including some long-standing rendering artifacts</li>
