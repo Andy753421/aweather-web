@@ -46,15 +46,15 @@ Content-Type: text/html; charset=UTF-8
 		</div>
 		<div class="content">
 			<!--
-				<p class="msg">This site is currently under construction.</p>
+				<p class="msg">This site is currently under construction</p>
 				<p class="msg" style="font-size:8pt; font-weight:normal;">
-				  If I had an animated GIF of a guy with a shovel, I would put it here.</p>
+				  If I had an animated GIF of a guy with a shovel, I would put it here</p>
 			-->
 			<% page->print(); %>
 			<div style="clear:both;"></div>
 		</div>
 		<p class="footer">
-			Copyright © 2011 Andy Spencer
+			Copyright © 2011-2012 Andy Spencer
 			<% for (int i = 0; footer[i].link; i++) { %>
 				| <% print_nav(&footer[i], page); %>
 			<% } %>
@@ -375,6 +375,16 @@ Content-Type: text/html; charset=UTF-8
 		<div class="code">git clone <%= GIT_GRITS    %></div>
 		<div class="code">git clone <%= GIT_RSL      %></div>
 	</div>
+	<p class="note left" style="margin-top: 1.5em;">
+		Repositories for packaging and this website
+		(and gitweb:
+		 <a href="<%= GW_PKG %>">Packaging</a>,
+		 <a href="<%= GW_WEB %>">Website</a>)
+	</p>
+	<div style="margin-left: 30px;">
+		<div class="code">git clone <%= GIT_PKG %></div>
+		<div class="code">git clone <%= GIT_WEB %></div>
+	</div>
 <% } %>
 
 <% void print_development(void) { %>
@@ -419,6 +429,8 @@ Content-Type: text/html; charset=UTF-8
 		<li>Currently building and running AWeather requires the
 		    exact same version of Grits to be installed<br />
 		    (This may change in the near future as the software stabilizes)</li>
+		<li>The <a href="download">Downloads</a> page has information
+		    on accessing the AWeather source code repositories</li>
 	</ul>
 <% } %>
 

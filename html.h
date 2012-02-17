@@ -17,10 +17,14 @@
 #define GIT_AWEATHER  "git://lug.rose-hulman.edu/proj/aweather"
 #define GIT_GRITS     "git://lug.rose-hulman.edu/proj/grits"
 #define GIT_RSL       "git://lug.rose-hulman.edu/~spenceal/rsl"
+#define GIT_PKG       "git://lug.rose-hulman.edu/~spenceal/aweather-pkg"
+#define GIT_WEB       "git://lug.rose-hulman.edu/~spenceal/aweather-web"
 
 #define GW_AWEATHER   "/git/?p=proj/aweather"
 #define GW_GRITS      "/git/?p=proj/grits"
 #define GW_RSL        "/git/?p=~spenceal/rsl"
+#define GW_PKG        "/git/?p=~spenceal/aweather-pkg"
+#define GW_WEB        "/git/?p=~spenceal/aweather-web"
 
 #define RSL_TAR       "rsl-v1.42.tar.gz"
 #define RSL_WEB       "http://trmm-fc.gsfc.nasa.gov/trmm_gv/software/rsl/"
