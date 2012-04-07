@@ -25,6 +25,7 @@ Content-Type: text/html; charset=UTF-8
 		<title>AWeather<% if (page->name) printf(" - %s", page->name); %></title>
 		<link rel="shortcut icon" href="images/aweather.ico" />
 		<link href="data/global.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="data/global.js"></script>
 		<meta http-equiv="X-UA-Compatible" content="IE=9" />
 		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 		<meta name="keywords" content="weather, radar, nexrad, level-ii, virtual globe, grits, rsl" />
@@ -313,33 +314,35 @@ Content-Type: text/html; charset=UTF-8
 		<li class="linux"><dl class="inline">
 			<dt>Source code</dt>
 			<dd>
-			<a href="files/aweather-<%= VERSION %>.tar.gz">aweather-<%= VERSION %>.tar.gz</a>,
-			<a href="../grits/grits-<%= VERSION_GRITS %>.tar.gz">grits-<%= VERSION_GRITS %>.tar.gz</a>,
-			<a href="files/rsl-1.40.tar.gz">rsl-1.40.tar.gz</a>
+				<a href="files/aweather-<%= VERSION %>.tar.gz">aweather-<%= VERSION %>.tar.gz</a>,
+				<a href="../grits/grits-<%= VERSION_GRITS %>.tar.gz">grits-<%= VERSION_GRITS %>.tar.gz</a>,
+				<a href="files/rsl-1.40.tar.gz">rsl-1.40.tar.gz</a>
 			</dd>
 
-			<dt>Gentoo</dt>
-			<dd><span class="code">emerge sci-geosciences/aweather</span> from the sunrise overlay</dd>
+			<dt class="shown">Binaries</dt>
+			<dd class="shown"><a href="javascript:show()">Show..</a></dd>
 
-			<dt>Debian</dt>
-			<dd><span class="code">apt-get install aweather</span> from Debian sid</dd>
+			<dt class="hidden">Gentoo</dt>
+			<dd class="hidden"><span class="code">emerge sci-geosciences/aweather</span>
+				from the <a href="<%= GENTOO_HOME %>">Sunrise</a> overlay</dd>
 
-			<dt>Ubuntu</dt>
-			<dd><span class="code">apt-get install aweather</span> from Ubuntu Oneiric,
-			    or the <a href="<%= UBUNTU_PPA %>">AWeather PPA</a></dd>
-			<!--
-				(Arch packages still have bugs)
-				<dt>Arch</dt>
-				<dd>Available from the AUR</dd>
-			-->
-			<!--
-				<dt>Slackware</dt>
-				<dd>Available in Slacky 13.37</dd>
-			-->
-			<!--
-				<dt>Mandriva</dt>
-				<dd>Available from contrib/cooker?</dd>
-			-->
+			<dt class="hidden">Debian</dt>
+			<dd class="hidden"><span class="code">apt-get install aweather</span>
+				from <a href="<%= DEBIAN_HOME %>">Debian</a> sid</dd>
+
+			<dt class="hidden">Ubuntu</dt>
+			<dd class="hidden"><span class="code">apt-get install aweather</span>
+				from <a href="<%= UBUNTU_HOME %>">Ubuntu</a> Oneiric,
+				or the <a href="<%= UBUNTU_PPA %>">AWeather PPA</a></dd>
+
+			<dt class="hidden">Slackware</dt>
+			<dd class="hidden">Included in <a href="<%= SLACKY_HOME %>">Slacky</a> 13.37</dd>
+
+			<dt class="hidden">Arch</dt>
+			<dd class="hidden">Available from the <a href="<%= ARCH_HOME %>">Arch User Repository</a></dd>
+
+			<dt class="hidden">Mandriva</dt>
+			<dd class="hidden">Available from Mandriva 2011</dd>
 		</dl></li>
 		<li class="windows"><dl class="inline">
 			<dt>Windows</dt>
@@ -351,7 +354,8 @@ Content-Type: text/html; charset=UTF-8
 		</dl></li>
 		<li class="macos" style="padding-top: .8em; padding-bottom: .8em"><dl class="inline">
 			<dt>Mac OS X</dt>
-			<dd><a href="files/aweather-<%= VERSION_MAC %>.dmg">aweather-<%= VERSION_MAC %>.dmg</a></dd>
+			<dd><a href="files/aweather-<%= VERSION_MAC %>.dmg">aweather-<%= VERSION_MAC %>.dmg</a>
+				(Requires 10.6 or newer)</dd>
 		</dl></li>
 	</ul>
 

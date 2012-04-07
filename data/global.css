@@ -320,22 +320,14 @@ dl.inline dt {
 dl.inline dt:after {
 	content: ":";
 }
+dl.inline .hidden {
+	display: none;
+}
 h1 + .note,
 h2 + .note,
-.left {
+.note.left {
 	text-align: left;
 	margin-bottom: 10px;
-}
-
-dl.inline dt {
-	display: block;
-	float: left;
-	clear: both;
-	font-weight: bold;
-	width: 8em;
-}
-dl.inline dt:after {
-	content: ":";
 }
 dl.small dt {
 	width: 4em;
