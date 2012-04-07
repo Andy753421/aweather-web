@@ -4,7 +4,7 @@
 #define VERSION_WIN   "0.7"
 #define VERSION_MAC   "0.7"
 
-#define VERSION_DESC  "Version " VERSION " a GPS tracking plugin for Linux " \
+#define VERSION_DESC  "Version " VERSION " adds a GPS tracking plugin for Linux " \
                       "along with various other updates and bug fixes"
 
 /* Link info */
