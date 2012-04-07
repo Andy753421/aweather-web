@@ -50,10 +50,10 @@ typedef struct {
 } page_t;
 
 /* Data */
-extern page_t header[];
-extern page_t other[];
-extern page_t footer[];
-extern page_t special[];
+const extern page_t header[];
+const extern page_t other[];
+const extern page_t footer[];
+const extern page_t special[];
 
 /* Global functions */
 void print_file(char *file);

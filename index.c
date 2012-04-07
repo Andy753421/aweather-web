@@ -9,7 +9,7 @@ const char desc[] =
 	"and volume rendering.";
 
 /* Page data */
-page_t header[] = {
+const page_t header[] = {
 	{"about",       "About",       print_about,        0.7, NULL},
 	{"news",        "News",        print_news,         0.3, NULL},
 	{"manual",      "Manual",      print_manual,       0.5, NULL},
@@ -18,16 +18,16 @@ page_t header[] = {
 	{"development", "Development", print_development,  0.3, NULL},
 	{NULL,          NULL,          NULL,               0.0, NULL},
 };
-page_t other[] = {
+const page_t other[] = {
 	{"grits",       "Grits",       print_grits,        0.8, NULL},
 	{"rsl",         "RSL",         print_rsl,          0.3, NULL},
 	{NULL,          NULL,          NULL,               0.0, NULL},
 };
-page_t footer[] = {
+const page_t footer[] = {
 	{"contact",     "Contact",     print_contact,      0.2, NULL},
 	{NULL,          NULL,          NULL,               0.0, NULL},
 };
-page_t special[] = {
+const page_t special[] = {
 	{"",            NULL,          print_index,        1.0, desc},
 	{"oldnews",     "Old News",    print_oldnews,      0.2, NULL},
 	{NULL,          "Not found",   print_notfound,    -1.0, NULL},
