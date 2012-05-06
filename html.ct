@@ -33,7 +33,7 @@ Content-Type: text/html; charset=UTF-8
 		<meta name="description" content="<%= page->desc %>" />
 		<% } %>
 		<meta name="google-site-verification" content="-SZkTpNRWHrpESTGNZ8Pshnz4zKbwfKv54NoavUKK_Y" />
-		<meta name="y_key" content="abe8287921b25151" />
+		<meta name="msvalidate.01" content="CB7C94BBCD12714FDFF3D22415B1888A" />
 	</head>
 	<body>
 		<div class="top">
@@ -514,20 +514,23 @@ Content-Type: text/html; charset=UTF-8
 		see the <a href="about">about</a> page for more details.
 	</p>
 	<hr />
-	<ul style="float: left;">
-		<li>Detailed Level-II NEXRAD radar<ul>
-			<li>3D volume rendering</li>
-			<li>Dual-pole support</li>
-		</ul></li>
-		<li>Online and offline modes<ul>
-			<li>Data caching</li>
-			<li>Automatic updating</li>
-		</ul></li>
-		<li>Warning/Watch/Advisory display</li>
-		<li>GPS tracking and logging</li>
-		<li>Surface and map overlays</li>
-		<li>Terrain rendering</li>
-	</ul>
+	<div style="float: left">
+		<h2 style="margin-top: 0;">Features:</h2>
+		<ul style="float: left;">
+			<li>Detailed Level-II NEXRAD radar<ul>
+				<li>3D volume rendering</li>
+				<li>Dual-pole support</li>
+			</ul></li>
+			<li>Online and offline modes<ul>
+				<li>Data caching</li>
+				<li>Automatic updating</li>
+			</ul></li>
+			<li>Warning/Watch/Advisory display</li>
+			<li>GPS tracking and logging</li>
+			<li>Surface and map overlays</li>
+			<li>Terrain rendering</li>
+		</ul>
+	</div>
 	<div style="float: left; margin-left: 20px;">
 		<% print_screen("stormbased"); %>
 		<div style="text-align: center; margin-right: 25px;">
@@ -536,8 +539,8 @@ Content-Type: text/html; charset=UTF-8
 		</div>
 	</div>
 	<a href="download" class="download" style="float: right;">
-		<span>Download</span>
-		<span>AWeather <%= VERSION %></span>
+		<span>AWeather</span>
+		<span>Download Version <%= VERSION %></span>
 		<img src="images/dl-arrow.png" alt="Download" />
 	</a>
 	<p style="text-align: center;"><%= VERSION_DESC %></p>

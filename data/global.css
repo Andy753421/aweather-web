@@ -90,8 +90,8 @@ body {
 
 /* Header stuff */
 .top {
-	height: 80px;
-	margin-top: 15px;
+	height: 75px;
+	margin-top: 20px;
 	border-collapse: collapse;
 	position: relative;
 }
@@ -101,11 +101,11 @@ body {
 }
 
 .logo {
-	width: 130px;
 	z-index: 1;
+	margin-right: 10px;
 }
 
-.title {
+.title, .title a {
 	font-size: 22pt;
 	font-weight: bold;
 	font-style: italic;
@@ -114,7 +114,7 @@ body {
 
 .nav {
 	position: absolute;
-	top: 45px;
+	top: 42px;
 	left: 135px;
 	right: 0px;
 	z-index: 1;
@@ -212,13 +212,13 @@ body {
 	margin-bottom: 10px;
 }
 
-.download {
+.download, a.download {
 	position: relative;
 	display: block;
 	z-index: 1;
 	height: 62px;
 	width: 150px;
-	color: white;
+	color: #eee;
 	font-size: 11pt;
 	text-decoration: none;
 	padding: 8px 25px 8px 25px;
@@ -234,9 +234,11 @@ body {
 }
 
 .download:first-line {
+	color: #fff;
+	font-size: 1.3em;
 	font-weight: bold;
-	font-style: italic;
-	line-height: 2em;
+	line-height: 1.9em;
+	text-shadow: 1px 1px 1px #666;
 }
 
 .download img {
