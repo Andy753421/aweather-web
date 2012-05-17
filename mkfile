@@ -4,10 +4,10 @@ CFLAGS='--std=c99 -Wall'
 all:V: index.cgi manual.inc images/aweather.ico images/logo.png
 
 index.cgi: index.o html.o
-	gcc $CFLAGS -o $target $prereq $PKG_LIBS
+	gcc $CFLAGS -o $target $prereq
 
 %.o: %.c html.h
-	gcc $CFLAGS $PKG_FLAGS -c -o $target $stem.c
+	gcc $CFLAGS -c -o $target $stem.c
 
 %.c: %.ct
 	$CT -o $target $prereq 
