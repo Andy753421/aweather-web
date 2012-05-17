@@ -26,7 +26,7 @@
 #define GW_PKG        "/git/?p=~spenceal/aweather-pkg"
 #define GW_WEB        "/git/?p=~spenceal/aweather-web"
 
-#define RSL_TAR       "rsl-v1.42.tar.gz"
+#define RSL_TAR       "rsl-v1.43.tar.gz"
 #define RSL_WEB       "http://trmm-fc.gsfc.nasa.gov/trmm_gv/software/rsl/"
 #define RSL_FTP       "ftp://trmm-fc.gsfc.nasa.gov/software/"
 
