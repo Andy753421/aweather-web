@@ -133,6 +133,27 @@ Content-Type: text/html; charset=UTF-8
 	<!-- It's not really spring anymore :/ -->
 	<!-- <p class="quote">Now that it's spring again, progress on AWeather is continuing.</p> -->
 	<dl class="news">
+		<dt>2012-12-11</dt>
+		<dd>
+			New Website!<ul>
+				<li>The Rose-Hulman Linux Users Group website
+				    has been unavailable for some time so we have
+				    moved on to a new and hopefully more stable server.
+				    A mirror of the old RHLUG website is available at
+				    <a href="http://rhlug.pileus.org/wiki/Main_Page">http://rhlug.pileus.org/</a></li>
+				<li>Due to the move, some of the site
+				    infrastructure such as bug tracer and the
+				    development wiki are unavailable
+				<li>These issues should be resolved shortly</li>
+			</ul>
+			New Mailing list!<ul>
+				<li>There is now an official mailing list for AWeather and other pileus.org projects as well:<br />
+				    <a href="<%= MAIL_LIST %>"><%= MAIL_LIST %></a></li>
+				<li>An astoundingly empty archive is also available:<br />
+				    <a href="<%= MAIL_ARCH %>"><%= MAIL_ARCH %></a></li>
+			</ul>
+		</dd>
+
 		<dt>2012-02-16</dt>
 		<dd>
 			AWeather 0.7 released: <ul>
@@ -175,7 +196,7 @@ Content-Type: text/html; charset=UTF-8
 		<dt>2011-11-03</dt>
 		<dd>
 			AWeather 0.6 released: <ul>
-				<li>Added "Alerts" plugin using the 
+				<li>Added "Alerts" plugin using the
 				    <a href="http://alerts.weather.gov/">NWS CAP</a> feed</li>
 				<li>Updated GTK+ libraries for Windows</li>
 				<li>Behind the scenes, mouse support in Grits
@@ -200,7 +221,7 @@ Content-Type: text/html; charset=UTF-8
 			AWeather 0.5.1 released: <ul>
 				<li>Bugfix release</li>
 				<li>Updated sat/map/elev to provide better data</li>
-				<li>First release with <a href="<%= DEBIAN_HOME %>">Debian</a>, 
+				<li>First release with <a href="<%= DEBIAN_HOME %>">Debian</a>,
 				                   and <a href="<%= UBUNTU_HOME %>">Ubuntu</a> packages</li>
 			</ul>
 		</dd>
@@ -315,7 +336,7 @@ Content-Type: text/html; charset=UTF-8
 			<dt>Source code</dt>
 			<dd>
 				<a href="files/aweather-<%= VERSION %>.tar.gz">aweather-<%= VERSION %>.tar.gz</a>,
-				<a href="../grits/grits-<%= VERSION_GRITS %>.tar.gz">grits-<%= VERSION_GRITS %>.tar.gz</a>,
+				<a href="../grits/files/grits-<%= VERSION_GRITS %>.tar.gz">grits-<%= VERSION_GRITS %>.tar.gz</a>,
 				<a href="files/rsl-1.40.tar.gz">rsl-1.40.tar.gz</a>
 			</dd>
 

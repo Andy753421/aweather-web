@@ -1,4 +1,4 @@
-CT=/scratch/ct/ct
+CT=/home/andy/git/ct/ct
 CFLAGS='--std=c99 -Wall'
 
 all:V: index.cgi manual.inc images/aweather.ico images/logo.png
@@ -26,9 +26,9 @@ clean:V:
 	rm -f *.o *.cgi html.c
 
 push:V:
-	user=spenceal
-	dest=/home/lug/htdocs/proj/aweather/
-	serv=lug.rose-hulman.edu
+	user=andy
+	dest=/home/pileus/htdocs/aweather/
+	serv=pileus.org
 	rsync -uavz .htaccess \
 		$user@$serv:$dest
 	rsync -uavz --delete \

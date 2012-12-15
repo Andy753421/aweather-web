@@ -14,17 +14,20 @@
 #define BUG_LIST      "/code/projects/aweather/issues"
 #define BUG_NEW       "/code/projects/aweather/issues/new"
 
-#define GIT_AWEATHER  "git://lug.rose-hulman.edu/proj/aweather"
-#define GIT_GRITS     "git://lug.rose-hulman.edu/proj/grits"
-#define GIT_RSL       "git://lug.rose-hulman.edu/~spenceal/rsl"
-#define GIT_PKG       "git://lug.rose-hulman.edu/~spenceal/aweather-pkg"
-#define GIT_WEB       "git://lug.rose-hulman.edu/~spenceal/aweather-web"
+#define MAIL_LIST     "http://pileus.org/mailman/listinfo/dev"
+#define MAIL_ARCH     "http://pileus.org/pipermail/dev/"
 
-#define GW_AWEATHER   "/git/?p=proj/aweather"
-#define GW_GRITS      "/git/?p=proj/grits"
-#define GW_RSL        "/git/?p=~spenceal/rsl"
-#define GW_PKG        "/git/?p=~spenceal/aweather-pkg"
-#define GW_WEB        "/git/?p=~spenceal/aweather-web"
+#define GIT_AWEATHER  "git://pileus.org/aweather"
+#define GIT_GRITS     "git://pileus.org/grits"
+#define GIT_RSL       "git://pileus.org/~andy/rsl"
+#define GIT_PKG       "git://pileus.org/~andy/aweather-pkg"
+#define GIT_WEB       "git://pileus.org/~andy/aweather-web"
+
+#define GW_AWEATHER   "/git/?p=aweather"
+#define GW_GRITS      "/git/?p=grits"
+#define GW_RSL        "/git/?p=~andy/rsl"
+#define GW_PKG        "/git/?p=~andy/aweather-pkg"
+#define GW_WEB        "/git/?p=~andy/aweather-web"
 
 #define RSL_TAR       "rsl-v1.43.tar.gz"
 #define RSL_WEB       "http://trmm-fc.gsfc.nasa.gov/trmm_gv/software/rsl/"
@@ -37,7 +40,7 @@
 #define ARCH_HOME     "http://aur.archlinux.org/packages.php?ID=52003"
 #define SLACKY_HOME   "http://www.slacky.eu/asche/pkgs/index.php?pkg=2682"
 
-#define PREFIX        "http://lug.rose-hulman.edu/proj/aweather/"
+#define PREFIX        "http://pileus.org/aweather/"
 
 /* Types */
 typedef struct {
