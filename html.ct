@@ -39,6 +39,7 @@ Content-Type: text/html; charset=UTF-8
 		<div class="top">
 			<a href="."><img class="logo" src="images/logo.png" alt="AWeather" /></a>
 			<h1 class="title"><a href=".">AWeather</a></h1>
+			<h1 class="subtitle"><a href="..">pileus.org</a></h1>
 			<h2 class="nav">
 				<% for (int i = 0; header[i].link; i++) print_nav(&header[i], page); %>
 				<span class="sep"></span>

@@ -1,4 +1,4 @@
-CT=/home/andy/git/ct/ct
+CT=/home/andy/src/ct/ct
 CFLAGS='--std=c99 -Wall'
 
 all:V: index.cgi manual.inc images/aweather.ico images/logo.png

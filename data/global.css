@@ -112,6 +112,12 @@ body {
 	color: #222;
 }
 
+.subtitle, .subtitle a {
+	font-size: 22pt;
+	font-style: italic;
+	float: right; 
+}
+
 .nav {
 	position: absolute;
 	top: 42px;
