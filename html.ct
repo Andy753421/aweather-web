@@ -529,9 +529,13 @@ Content-Type: text/html; charset=UTF-8
 	<h1>Contact</h1>
 	<p class="note">Questions? Comments? Trouble compiling AWeather?</p>
 	<dl class="inline small">
-		<dt>Bugs</dt> <dd><a href="<%= BUG_LIST %>">Issue Tracker</a> (sign in to add a new issue)</dd>
-		<dt>Email</dt><dd><a href="mailto:andy753421@gmail.com">Andy Spencer</a></dd>
-		<dt>IRC</dt>  <dd>#rhlug@irc.freenode.net</dd>
+		<dt>Lists</dt>
+		<dd><a href="<%= MAIL_LIST %>">Mailing list</a> |
+		    <a href="<%= MAIL_ARCH %>">Archived messages</a></dd>
+		<dt>Bugs</dt>
+		<dd><a href="<%= BUG_LIST %>">Issue Tracker</a> (sign in to add a new issue)</dd>
+		<dt>IRC</dt>
+		<dd>#pileus@irc.freenode.net</dd>
 	</dl>
 <% } %>
 
