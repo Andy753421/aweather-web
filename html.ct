@@ -134,6 +134,15 @@ Content-Type: text/html; charset=UTF-8
 	<!-- It's not really spring anymore :/ -->
 	<!-- <p class="quote">Now that it's spring again, progress on AWeather is continuing.</p> -->
 	<dl class="news">
+		<dt>2013-01-28</dt>
+		<dd>
+			AWeather 0.8 released: <ul>
+				<li>Adds a compass rose to show (and reset) view rotations</li>
+				<li>Make radar labels clickable</li>
+				<li>Many performance and stability improvements</li>
+			</ul>
+		</dd>
+
 		<dt>2012-12-11</dt>
 		<dd>
 			New Website!<ul>
@@ -167,7 +176,7 @@ Content-Type: text/html; charset=UTF-8
 				        if you're very very brave</li>
 				</ul></li>
 				<li>Detailed (but opaque) maps in the map plugin</li>
-				<li>Automaticlaly save window size and position</li>
+				<li>Automatically save window size and position</li>
 				<li>Add toggle buttons for county-based and storm-based alerts</li>
 				<li>Miscellaneous bug fixes, including some long-standing rendering artifacts</li>
 			</ul>

@@ -1,18 +1,18 @@
 /* Version information */
-#define VERSION       "0.7"
-#define VERSION_GRITS "0.7"
-#define VERSION_WIN   "0.7"
-#define VERSION_MAC   "0.7"
+#define VERSION       "0.8"
+#define VERSION_GRITS "0.8"
+#define VERSION_WIN   "0.8"
+#define VERSION_MAC   "0.8"
 
-#define VERSION_DESC  "Version " VERSION " adds a GPS tracking plugin for Linux " \
-                      "along with various other updates and bug fixes"
+#define VERSION_DESC  "Version " VERSION " adds a compass rose, clickable radar labels, " \
+                      "and a number of bug fixes."
 
 /* Link info */
-#define WIKI_INDEX    "/code/projects/aweather/wiki"
-#define WIKI_INSTALL  "/code/projects/aweather/wiki/Install"
+#define WIKI_INDEX    "/dev/projects/aweather/wiki"
+#define WIKI_INSTALL  "/dev/projects/aweather/wiki/Install"
 
-#define BUG_LIST      "/code/projects/aweather/issues"
-#define BUG_NEW       "/code/projects/aweather/issues/new"
+#define BUG_LIST      "/dev/projects/aweather/issues"
+#define BUG_NEW       "/dev/projects/aweather/issues/new"
 
 #define MAIL_LIST     "http://pileus.org/mailman/listinfo/dev"
 #define MAIL_ARCH     "http://pileus.org/pipermail/dev/"

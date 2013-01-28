@@ -20,7 +20,7 @@ images/aweather.ico: ../aweather/data/icons/16x16/aweather.png
 	icotool -c $prereq -o $target
 
 images/logo.png: ../aweather/data/icons/scalable/aweather.svg
-	rsvg -w 130 -h 130 $prereq $target
+	rsvg-convert -w 130 -h 130 -o $target $prereq 
 
 clean:V:
 	rm -f *.o *.cgi html.c
