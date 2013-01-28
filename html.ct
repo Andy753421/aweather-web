@@ -56,7 +56,7 @@ Content-Type: text/html; charset=UTF-8
 			<div style="clear:both;"></div>
 		</div>
 		<p class="footer">
-			Copyright © 2011-2012 Andy Spencer
+			Copyright © 2011-2013 Andy Spencer
 			<% for (int i = 0; footer[i].link; i++) { %>
 				| <% print_nav(&footer[i], page); %>
 			<% } %>
